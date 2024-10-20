@@ -14,13 +14,14 @@ const App = () => {
       i18n.changeLanguage('de');
     }
   };
+  console.log('test updated Netlify settings');
   return (
     <div className="dark">
-      <div className="fixed top-0 left-0 w-full h-full z-[-10] bg-[url('/cracked-concrete-wall-textured-background-blue.jpg')] bg-center bg-cover"></div>
+      <div className="fixed left-0 top-0 z-[-10] h-full w-full bg-[url('/cracked-concrete-wall-textured-background-blue.jpg')] bg-cover bg-center"></div>
 
-      <div id="App-container" className="z-0 overscroll-none absolute top-0 w-full">
+      <div id="App-container" className="absolute top-0 z-0 w-full overscroll-none">
         {/* <Navbar /> */}
-        <div className="flex flex-row justify-center mt-2">
+        <div className="mt-2 flex flex-row justify-center">
           <Button onClick={changeLanguage} text={t('switch_language')} />
         </div>
         <div className=" flex flex-row justify-center">
