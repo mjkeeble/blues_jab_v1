@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  height: 100vh;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+.content-section {
+  margin-top: 14rem;
+}
+
+.background-animation {
+  background-size: 160% 160%;
+  background-attachment: fixed;
+  animation: background-movement 50s ease-in-out infinite;
+
+  -webkit-animation: background-movement 50s ease-in-out infinite;
+  -moz-animation: background-movement 50s ease-in-out infinite;
+  animation: background-movement 50s ease-in-out infinite;
+}
+
+.background-fixed {
+  background-attachment: fixed;
+  background-size: 160% 160%;
+  background-size: cover;
+}
+
+@keyframes background-movement {
+  0% {
+    background-position: 35% 50%;
+  }
+  10% {
+    background-position: 0% 70%;
+  }
+  20% {
+    background-position: 80% 90%;
+  }
+  30% {
+    background-position: 0% 85%;
+  }
+  40% {
+    background-position: 80% 0%;
+  }
+  50% {
+    background-position: 80% 40%;
+  }
+  60% {
+    background-position: 15% 15%;
+  }
+  70% {
+    background-position: 50% 20%;
+  }
+  80% {
+    background-position: 100% 40%;
+  }
+  90% {
+    background-position: 80% 90%;
+  }
+  100% {
+    background-position: 35% 50%;
+  }
+}

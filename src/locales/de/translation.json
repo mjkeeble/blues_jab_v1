@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "about": "Über Uns",
+    "music": "Musik",
+    "gigs": "Auftritte",
+    "gallery": "Galerie",
+    "contact": "Kontaktiere uns!"
+  },
+  "about": {
+    "paragraph1": "Fünf leidenschaftliche Hobby-Musiker aus verschiedenen Lebensbereichen, jedoch mit einer gemeinsamen Liebe: dem Blues. Obwohl wir keine ausverkauften Stadien oder Platinalben vorweisen können (Mensch, wir kriegen nicht mal einen Modelling-Vertrag!), berühren unser rohes, ungeschliffenes Talent und unsere herzlichen Auftritte jeden Blues-Enthusiasten.",
+    "paragraph2": "Gegründet 2022 dreht sich bei Blues Jab alles um authentischen, unkomplizierten Blues und den Spaß an der Musik. Mit einer Mischung aus Blues Standards und eigenen Stücken bringen wir Euch diesen tiefen, emotionalen Sound, der seit Generationen den Soundtrack für Höhen und Tiefen im Leben bildet.",
+    "paragraph3": "Also, wenn ihr einen Abend mit mitreißender Musik sucht, bei der ihr mit den Füßen wippt und jede Note in Euren Knochen spüren könnt, kommt ihr zu Blues Jab bei unserem nächsten Auftritt. Wir sind nicht auf Ruhm aus, stattdessen lassen wir unsere Liebe zum Blues in jeder Performance durchstrahlen und schaffen ein unvergessliches Musikerlebnis, das ihr nicht verpassen solltet!"
+  },
+  "instruments": {
+    "André": "Gitarre",
+    "Dirk": "Bass",
+    "Frank": "Schlagzeug",
+    "Mark": "Gesang & Gitarre",
+    "Wolfgang": "Gitarre"
+  },
+  "next_gig": "Nächster Auftritt!",
+  "no_gigs": "Keine Auftritte derzeit geplant. Schau bald wieder vorbei!",
+  "send_email": "Schick uns eine E-Mail!",
+  "show_map": "Karte anzeigen",
+  "show_past_gigs": "Vergangene Auftritte anzeigen",
+  "hide_past_gigs": "Vergangene Auftritte verbergen",
+  "switch_language": "English"
+}

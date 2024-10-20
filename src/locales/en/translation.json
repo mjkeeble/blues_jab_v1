@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "about": "About Us",
+    "music": "Music",
+    "gigs": "Gigs",
+    "gallery": "Gallery",
+    "contact": "Contact Us"
+  },
+  "about": {
+    "paragraph1": "Five passionate hobby musicians from different walks of life, but with a common love: the blues. We've never sold out a stadium or recorded a platinum-selling album (let's be honest, we can't even get a modelling contract!), but our raw, unpolished talent and heartfelt performances touch every blues enthusiast.",
+    "paragraph2": "Founded in 2022, Blues Jab is all about authentic, uncomplicated electric blues. With a mix of blues standards and original tunes, we bring you that deep, emotional sound that has been the soundtrack to life's ups and downs for generations.",
+    "paragraph3": "So, if you're looking for an evening of infectious music that will have you tapping your feet and feeling every note in your bones, come and see Blues Jab at our next gig. We're not in it for the fame, instead we want to let our love of the blues shine through in every performance, creating an unforgettable musical experience you won't want to miss!"
+  },
+  "instruments": {
+    "André": "Guitar",
+    "Dirk": "Bass",
+    "Frank": "Drums",
+    "Mark": "Vocals & guitar",
+    "Wolfgang": "Guitar"
+  },
+  "next_gig": "Next gig!",
+  "no_gigs": "No gigs planned at the moment. Please come by again later!",
+  "send_email": "Send us an email!",
+  "show_map": "Show map",
+  "show_past_gigs": "Show past gigs",
+  "hide_past_gigs": "Hide past gigs",
+  "switch_language": "Deutsch"
+}
