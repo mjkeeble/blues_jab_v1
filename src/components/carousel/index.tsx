@@ -5,8 +5,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect, useState } from 'react';
 import { cld } from '../../services/cloudinaryInstance';
 import { NextButton, PrevButton } from './CarouselButtons';
-import { usePrevNextButtons } from './buttonHandlers';
-import data from '../../../data/data.json';
+import {usePrevNextButtons} from './buttonHandlers';
+import { Photo } from '../../types';
 // import {focusOn} from '@cloudinary/url-gen/qualifiers/gravity';
 // import {FocusOn} from '@cloudinary/url-gen/qualifiers/focusOn';
 
@@ -16,6 +16,21 @@ const Carousel = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
+  const [photos, setPhotos] = useState<Photo[]>([]);
+
+	useEffect(() => {
+		const fetchPhotos = async () => {
+			try {
+				const response = await fetch("http://localhost:3000/photos");
+				const data = await response.json();
+				setPhotos(data);
+			} catch (error) {
+				console.error(error);
+			}
+		};
+
+		fetchPhotos();
+	}, []);
 
   const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 
@@ -34,8 +49,8 @@ const Carousel = () => {
     <section className="max-w-6xl mx-auto">
       <div className="overflow-hidden w-full" ref={emblaRef}>
         <div className="flex">
-          {data.photos.map((fileId, index) => {
-            const image = cld.image(`bluesjab/photos/${fileId}`).resize(
+          {photos.map((photo, index) => {
+            const image = cld.image(`bluesjab/photos/${photo.fileId}`).resize(
               fit()
                 .width(Math.min(windowWidth, 1154))
                 .height(Math.min((Math.floor(windowHeight / 3)), 576)),
