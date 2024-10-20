@@ -31,8 +31,8 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
   const { t } = useTranslation();
   const dateTime = new Date(gig.dateTime);
   const bgColors = {
-    past: 'bg-bj-blue-light',
-    next: 'bg-bj-red-dark',
+    past: 'bg-bj-white',
+    next: 'bg-bj-red',
     future: 'bg-bj-blue-mid',
   };
 

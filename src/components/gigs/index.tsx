@@ -41,13 +41,13 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
   if (gigs.length) {
     return (
       <section>
-        <div id="gigs" className="mr-2 flex flex-row items-center justify-between">
-          <h1 className={`ml-4 h-min font-fredericka text-2xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
+        <div id="gigs" className="flex flex-row items-center justify-between mb-12">
+          <h1 className={`ml-2 h-min font-fredericka text-2xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
           {pastGigs.length ? (
             <Button text={showPastGigs ? 'hide_past_gigs' : 'show_past_gigs'} onClick={handleClick} colors={ colorSettings.button} />
           ) : null}
         </div>
-        <div className="mx-8 grid grid-cols-1 justify-items-center gap-x-4 gap-y-16 p-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-8 grid grid-cols-1 justify-items-center gap-x-4 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
           {/* gig cards */}
 
           <Fade cascade direction={'up'} triggerOnce duration={700} damping={0.1}>
