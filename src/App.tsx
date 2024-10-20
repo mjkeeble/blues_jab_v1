@@ -1,6 +1,6 @@
 import { useTranslation, withTranslation } from 'react-i18next';
 import { AboutUs, Button, Contact, ContentBlock, Gallery, Gigs, Jumbotron } from './components';
-import { BLUE_DARK, BLUE_LIGHT, BLUE_MID, colorScheme, TRANSPARENT, WHITE } from './const';
+import { BLUE_DARK, BLUE_LIGHT, colorScheme, TRANSPARENT, WHITE } from './const';
 import i18n from './i18n';
 import './index.css';
 
@@ -35,8 +35,8 @@ const App = () => {
         <ContentBlock bgColor={BLUE_LIGHT}>
           <Gigs colorSettings={colorScheme.BLUE_LIGHT} />
         </ContentBlock>
-        <ContentBlock bgColor={BLUE_MID}>
-          <Gallery colorSettings={colorScheme.BLUE_MID} />
+        <ContentBlock bgColor={WHITE}>
+          <Gallery colorSettings={colorScheme.WHITE} />
         </ContentBlock>
         <ContentBlock bgColor={BLUE_DARK} isFooter={true}>
           <Contact />

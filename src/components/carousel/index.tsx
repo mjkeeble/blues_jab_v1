@@ -46,18 +46,18 @@ const Carousel = () => {
   }, []);
 
   return (
-    <section className="max-w-6xl mx-auto">
-      <div className="overflow-hidden w-full" ref={emblaRef}>
+    <section className="mx-auto max-w-6xl">
+      <div className="w-full overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {photos.map((photo, index) => {
             const image = cld.image(`bluesjab/photos/${photo.fileId}`).resize(
               fit()
                 .width(Math.min(windowWidth, 1154))
-                .height(Math.min((Math.floor(windowHeight / 3)), 576)),
+                .height(Math.min(Math.floor(windowHeight / 3), 576)),
             );
             return (
-              <div className="flex-none w-full px-7" key={index}>
-                <div className="shadow-inner flex items-center justify-center">
+              <div className="w-full flex-none px-7" key={index}>
+                <div className="flex items-center justify-center shadow-inner">
                   <AdvancedImage cldImg={image} />
                 </div>
               </div>
@@ -66,9 +66,9 @@ const Carousel = () => {
         </div>
       </div>
       <div className="flex flex-row justify-around">
-        <div className="grid grid-cols-2 gap-7 items-center">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        <div className="grid grid-cols-2 items-center gap-7">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} color="bg-blue-dark" />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} color="bg-blue-dark" />
         </div>
       </div>
     </section>

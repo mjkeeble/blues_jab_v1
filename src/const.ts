@@ -18,24 +18,24 @@ export const colorScheme: ContentBlockColors = {
     cardH1: 'text-bj-blue-light',
     cardText: 'text-bj-blue-light',
     button: {
-    bg: 'bg-bj-white',
-    text: 'text-bj-blue-dark',
-    bgHover: 'bg-bj-blue-mid',
-    }
+      bg: 'bg-bj-white',
+      text: 'text-bj-blue-dark',
+      bgHover: 'bg-bj-blue-mid',
+    },
   },
   BLUE_LIGHT: {
     body: 'bg-bj-blue-light',
-    margins: 'backdrop-opacity-100',
+    margins: 'bg-bj-blue-light',
     h1: 'text-bj-blue-dark',
     text: 'text-black',
     cardBg: 'bg-bj-white',
     cardH1: 'text-bj-blue-dark',
     cardText: 'text-bj-blue-dark',
     button: {
-    bg: 'bg-bj-blue-dark',
-    text: 'text-bj-white',
-    bgHover: 'bg-bj-blue-mid',
-    }
+      bg: 'bg-bj-blue-dark',
+      text: 'text-bj-white',
+      bgHover: 'bg-bj-blue-mid',
+    },
   },
   BLUE_MID: {
     body: 'bg-bj-blue-mid',
@@ -46,10 +46,10 @@ export const colorScheme: ContentBlockColors = {
     cardH1: 'text-bj-blue-dark',
     cardText: 'text-bj-blue-dark',
     button: {
-    bg: 'bg-bj-green',
-    text: 'text-bj-white',
-    bgHover: 'bg-bj-green-dark',
-    }
+      bg: 'bg-bj-green',
+      text: 'text-bj-white',
+      bgHover: 'bg-bj-green-dark',
+    },
   },
   BLUE_DARK: {
     body: 'bg-bj-blue-dark',
@@ -60,10 +60,10 @@ export const colorScheme: ContentBlockColors = {
     cardH1: 'text-bj-blue-light',
     cardText: 'text-bj-blue-white',
     button: {
-    bg: 'bg-bj-white',
-    text: 'text-bj-blue-dark',
-    bgHover: 'bg-bj-blue-light',
-    }
+      bg: 'bg-bj-white',
+      text: 'text-bj-blue-dark',
+      bgHover: 'bg-bj-blue-light',
+    },
   },
   WHITE: {
     body: 'bg-bj-white',
@@ -74,10 +74,10 @@ export const colorScheme: ContentBlockColors = {
     cardH1: 'text-bj-blue-dark',
     cardText: 'text-bj-blue-dark',
     button: {
-    bg: 'bg-bj-red',
-    text: 'text-bj-white',
-    bgHover: 'bg-bj-red-dark',
-    }
+      bg: 'bg-bj-red',
+      text: 'text-bj-white',
+      bgHover: 'bg-bj-red-dark',
+    },
   },
 };
 
