@@ -2,13 +2,32 @@ import { AdvancedImage } from '@cloudinary/react';
 import { fill } from '@cloudinary/url-gen/actions/resize';
 import { Fade, Slide } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
-import data from '../../../data/data.json';
 import { cld } from '../../services/cloudinaryInstance';
+import {Member} from '../../types';
+import {useEffect, useState} from 'react';
 
 export const AboutUs = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
+  const [members, setMembers] = useState<Member[]>([]);
+  console.log(members)
 
-  return (
+  
+  useEffect(() => {
+    const fetchMembers = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/members');
+        const data = await response.json();
+        setMembers(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchMembers();
+  }, []);
+  
+
+  return ( 
     <section id="aboutUs">
       <div className=" bg-bj-blue-dark dark:bg-bj-blue-light w-20 m-auto mt-4" />
       <Slide direction="left" triggerOnce>
@@ -28,7 +47,7 @@ export const AboutUs = () => {
 
       <div className="mx-8 mt-8 p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-16">
         <Fade cascade direction="up" delay={1000} damping={0.1} triggerOnce>
-          {data.members
+          {members
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((member, index) => {
               const portrait = cld.image(`bluesjab/${member.image}`);
