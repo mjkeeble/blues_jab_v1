@@ -40,7 +40,7 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
 
   if (gigs.length) {
     return (
-      <section>
+      <section className="pb-12">
         <div id="gigs" className="flex flex-row items-center justify-between mb-12">
           <h1 className={`ml-2 h-min font-fredericka text-2xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
           {pastGigs.length ? (
