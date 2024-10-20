@@ -1,0 +1,118 @@
+{
+	"members": [
+		{
+			"name": "Mark",
+			"image": "mark_jpg"
+		},
+		{
+			"name": "Wolfgang",
+			"image": "wolfgang_jpg"
+		},
+		{
+			"name": "André",
+			"image": "andre_jpg"
+		},
+		{
+			"name": "Dirk",
+			"image": "dirk_jpg"
+		},
+		{
+			"name": "Frank",
+			"image": "frank_jpg"
+		}
+	],
+	"photos": [
+		{ "fileId": "240928_OpenStage_1" },
+		{ "fileId": "240928_OpenStage_2" },
+		{ "fileId": "240928_OpenStage_3" },
+		{ "fileId": "240928_OpenStage_4" },
+		{ "fileId": "240612_Goehren" },
+		{ "fileId": "Band_240406_1" },
+		{ "fileId": "Band_240406_2" },
+		{ "fileId": "Band_240406_3" },
+		{ "fileId": "230422_Blues_Jab_in_Stralsund_1" },
+		{ "fileId": "230422_Blues_Jab_in_Stralsund_2" },
+		{ "fileId": "230422_Blues_Jab_in_Stralsund_3" },
+		{ "fileId": "230422_Blues_Jab_in_Stralsund_4" },
+		{ "fileId": "230422_Blues_Jab_in_Stralsund_5" },
+		{ "fileId": "230614_Blues_Jab_in_Goehren_05" },
+		{ "fileId": "230921_Blues_Jab_in_Berlin_01" },
+		{ "fileId": "230921_Blues_Jab_in_Berlin_02" },
+		{ "fileId": "240406_Blues_Jab_in_Babelsberg_2" },
+		{ "fileId": "240406_Blues_Jab_in_Babelsberg_3" },
+		{ "fileId": "240406_Blues_Jab_in_Babelsberg_4" },
+		{ "fileId": "Band_240406_mit_Thesa_4" },
+		{ "fileId": "Band_240406_mit_Thesa_5" }
+	],
+	"videos": [
+		{ "title": "Blues Jab @ Blues Camp 2024", "urlRef": "Nz1xR-jV_88?start=56" }
+	],
+	"gigs": [
+		{
+			"index": 0,
+			"venue": "Strahlwerk",
+			"town": "Stralsund DE",
+			"dateTime": "2023-03-22T20:00:00",
+			"comment": {
+				"en": "Supporting act for Blanck Zappath",
+				"de": "Vorband für Blanck Zappath"
+			},
+			"mapUrl": "https://maps.google.com/maps?q=strahlwerk%20stralsund"
+		},
+		{
+			"index": 1,
+			"venue": "Regenbogen Camp",
+			"town": "Göhren DE",
+			"dateTime": "2023-06-22T20:30:00",
+			"comment": {
+				"en": "Performance at this year's Blues Camp",
+				"de": "Auftritt beim diesjährigen Blues Camp"
+			},
+			"mapUrl": "https://maps.google.com/maps?q=regenbogen%20camp%20g%C3%B6hren"
+		},
+		{
+			"index": 2,
+			"venue": "Blues Garage",
+			"town": "Berlin DE",
+			"dateTime": "2023-09-22T19:00:00",
+			"mapUrl": "https://maps.google.com/maps?q=blues%20garage%20berlin"
+		},
+		{
+			"index": 3,
+			"venue": "Die Alte Garage",
+			"town": "Potsdam Babelsberg DE",
+			"dateTime": "2024-04-06T19:00:00",
+			"mapUrl": "https://maps.google.com/maps?q=die%20alte%20garage%20babelsberg"
+		},
+		{
+			"index": 4,
+			"venue": "Strahlwerk",
+			"town": "Stralsund DE",
+			"dateTime": "2024-09-21T14:00:00",
+
+			"comment": {
+				"en": "strahlfest 2024",
+				"de": "strahlfest 2024"
+			},
+			"mapUrl": "https://maps.google.com/maps?q=strahlwerk%20stralsund"
+		},
+		{
+			"index": 5,
+			"venue": "Kulturscheune Rangsdorf",
+			"town": "Rangsdorf DE",
+			"dateTime": "2024-09-28T19:30:00",
+			"mapUrl": "https://www.google.com/maps/place/Kulturscheune/@52.2917505,13.4179305,19.66z/data=!4m6!3m5!1s0x47a841f81f0c0001:0xf199e90603fb215a!8m2!3d52.2917743!4d13.4189511!16s%2Fg%2F11fr3klzsx?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D",
+			"comment": {
+				"en": "Performance as part of the Kulturverein Rangsdorf Open Stage",
+				"de": "Auftritt im Rahmen der Open Stage des Kulturvereins Rangsdorf e.V."
+			}
+		},
+		{
+			"index": 6,
+			"venue": "Die Alte Garage",
+			"town": "Potsdam Babelsberg DE",
+			"dateTime": "2025-04-05T19:00:00",
+			"mapUrl": "https://maps.google.com/maps?q=die%20alte%20garage%20babelsberg"
+		}
+	]
+}
