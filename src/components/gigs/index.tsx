@@ -63,18 +63,17 @@ export const Gigs = () => {
 			<section>
 				<div
 					id="gigs"
-					className="content-section mr-2"
+					className="content-section mr-2 flex flex-row justify-between items-center"
 				>
 					<h1 className="text-bj-blue dark:text-bj-blue-light ml-4 text-2xl md:text-6xl h-min font-fredericka">
 						Gigs
 					</h1>
 					{pastGigs.length ? (
-						<div className="flex flex-row justify-center mt-6">
 							<Button
 								text={showPastGigs ? "hide_past_gigs" : "show_past_gigs"}
 								onClick={handleClick}
 							/>
-						</div>
+						
 					) : null}
 				</div>
 				<div className="mx-8 p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-16 justify-items-center">

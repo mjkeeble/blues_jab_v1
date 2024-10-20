@@ -4,8 +4,7 @@ import { Logo } from '../logo';
 export const Jumbotron = () => {
   return (
     <header
-      id="oben"
-      className="relative grid grid-cols-1 lg:grid-cols-2 bg-cover bg-no-repeat px-3 items-center h-screen"
+      className="relative grid grid-cols-1 lg:grid-cols-2 px-3 items-center py-72"
     >
       <Zoom triggerOnce duration={1000}>
         <Logo />
