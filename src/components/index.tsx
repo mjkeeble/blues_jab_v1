@@ -6,3 +6,4 @@ export * from './gallery';
 export * from './gigs';
 export * from './jumbotron';
 export * from './music';
+export * from './contentBlock';

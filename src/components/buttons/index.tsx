@@ -4,15 +4,20 @@ import { useTranslation } from 'react-i18next';
 type ButtonProps = {
   text: string;
   onClick: () => void;
+  colors: {
+    bg: string;
+    text: string;
+    bgHover: string;
+  }
 };
 
-export const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
+export const Button: React.FC<ButtonProps> = ({ text, onClick, colors}) => {
   const { t } = useTranslation();
 
   return (
     <Fade delay={500} triggerOnce>
       <button
-        className="bg-bj-blue-dark dark:bg-bj-blue-light text-bj-white dark:text-bj-blue-dark hover:bg-bj-blue-mid h-10 rounded-full px-4"
+        className={`${colors.bg} ${colors.text} hover:${colors.bgHover} h-10 rounded-full px-4`}
         onClick={onClick}
       >
         {t(text)}

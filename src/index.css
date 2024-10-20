@@ -15,10 +15,6 @@
   text-rendering: optimizeLegibility;
 }
 
-.content-section {
-  margin-top: 14rem;
-}
-
 .background-animation {
   background-size: 160% 160%;
   background-attachment: fixed;

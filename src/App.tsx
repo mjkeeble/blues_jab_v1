@@ -1,7 +1,7 @@
 import { useTranslation, withTranslation } from 'react-i18next';
+import { AboutUs, Button, Contact, ContentBlock, Gallery, Gigs, Jumbotron } from './components';
+import { BLUE_DARK, BLUE_LIGHT, BLUE_MID, colorScheme, TRANSPARENT, WHITE } from './const';
 import i18n from './i18n';
-
-import { AboutUs, Button, Contact, Gallery, Gigs, Jumbotron } from './components';
 import './index.css';
 
 const App = () => {
@@ -16,26 +16,33 @@ const App = () => {
   };
   console.log('test updated Netlify settings');
   return (
-    <div className="dark">
+    <>
       <div className="fixed left-0 top-0 z-[-10] h-full w-full bg-[url('/cracked-concrete-wall-textured-background-blue.jpg')] bg-cover bg-center"></div>
 
       <div id="App-container" className="absolute top-0 z-0 w-full overscroll-none">
-        {/* <Navbar /> */}
         <div className="mt-2 flex flex-row justify-center">
-          <Button onClick={changeLanguage} text={t('switch_language')} />
+          <Button onClick={changeLanguage} text={t('switch_language')} colors={colorScheme.TRANSPARENT.button} />
         </div>
-        <div className=" flex flex-row justify-center">
-          <div className="w-full 2xl:w-[71rem]">
-            <Jumbotron />
-            <AboutUs />
-            {/* <Music /> */}
-            <Gigs />
-            <Gallery />
-            <Contact />
-          </div>
-        </div>
+        <ContentBlock bgColor={TRANSPARENT}>
+          {/* <Navbar /> */}
+          <Jumbotron />
+        </ContentBlock>
+        <ContentBlock bgColor={WHITE}>
+          <AboutUs colorSettings={colorScheme.WHITE} />
+        </ContentBlock>
+
+        {/* <Music /> */}
+        <ContentBlock bgColor={BLUE_LIGHT}>
+          <Gigs colorSettings={colorScheme.BLUE_LIGHT} />
+        </ContentBlock>
+        <ContentBlock bgColor={BLUE_MID}>
+          <Gallery colorSettings={colorScheme.BLUE_MID} />
+        </ContentBlock>
+        <ContentBlock bgColor={BLUE_DARK} isFooter={true}>
+          <Contact />
+        </ContentBlock>
       </div>
-    </div>
+    </>
   );
 };
 
