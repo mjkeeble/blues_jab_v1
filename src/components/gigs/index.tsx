@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Fade, JackInTheBox } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
-import data from "../../../data/data.json";
 import { Button } from "../../components";
 import i18n from "../../i18n";
 import { Gig } from "../../types";
@@ -58,7 +57,7 @@ export const Gigs = () => {
 		setShowPastGigs(!showPastGigs);
 	};
 
-	if (data.gigs.length) {
+	if (gigs.length) {
 		return (
 			<section>
 				<div
