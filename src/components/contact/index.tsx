@@ -1,6 +1,6 @@
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AttentionSeeker, Zoom } from 'react-awesome-reveal';
+import { AttentionSeeker } from 'react-awesome-reveal';
 
 import { useTranslation } from 'react-i18next';
 
@@ -8,11 +8,11 @@ export const Contact = () => {
   const { t } = useTranslation();
   return (
     <footer id="contact">
-      <Zoom triggerOnce duration={500}>
+      
         <h1 className="m-2 text-center font-fredericka text-4xl text-bj-blue-light md:text-6xl">
           {t('sections.contact')}
         </h1>
-      </Zoom>
+      
 
       <div className="my-4 flex w-full justify-center md:my-14">
         <a
