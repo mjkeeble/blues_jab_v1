@@ -2,12 +2,11 @@ import { AdvancedImage } from '@cloudinary/react';
 import { fit } from '@cloudinary/url-gen/actions/resize';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import data from '../../../data/data.json';
 import { cld } from '../../services/cloudinaryInstance';
 import { Photo } from '../../types';
 import { NextButton, PrevButton } from './CarouselButtons';
-import { usePrevNextButtons } from './buttonHandlers';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
@@ -32,8 +31,14 @@ const Carousel = () => {
 
   //   fetchPhotos();
   // }, [apiUrl]);
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
-  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+  // const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 
   useEffect(() => {
     const handleResize = () => {
@@ -65,11 +70,11 @@ const Carousel = () => {
             );
           })}
         </div>
-      </div>
-      <div className="mt-2 flex flex-row justify-around">
-        <div className="grid grid-cols-2 items-center gap-7  rounded-full bg-bj-blue-light">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} color="bg-blue-dark" />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} color="bg-blue-dark" />
+        <div className="mt-2 flex flex-row justify-around">
+          <div className="grid grid-cols-2 items-center gap-7  rounded-full bg-bj-blue-light">
+            <PrevButton onClick={scrollPrev} color="bg-blue-dark" />
+            <NextButton onClick={scrollNext} color="bg-blue-dark" />
+          </div>
         </div>
       </div>
     </section>
