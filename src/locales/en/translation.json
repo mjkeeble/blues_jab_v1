@@ -19,7 +19,8 @@
     "Wolfgang": "Guitar"
   },
   "next_gig": "Next gig!",
-  "no_gigs": "No gigs planned at the moment. Please come by again later!",
+  "no_gigs_found": "Error: no gigs found.",
+  "no_gigs_planned": "No gigs planned at the moment. Please come by again later!",
   "send_email": "Send us an email!",
   "show_map": "Show map",
   "show_past_gigs": "Show past gigs",

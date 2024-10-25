@@ -19,7 +19,8 @@
     "Wolfgang": "Gitarre"
   },
   "next_gig": "Nächster Auftritt!",
-  "no_gigs": "Keine Auftritte derzeit geplant. Schau bald wieder vorbei!",
+  "no_gigs_found": "Fehler: keine Auftritte gefunden.",
+  "no_gigs_planned": "Keine Auftritte derzeit geplant. Schau bald wieder vorbei!",
   "send_email": "Schick uns eine E-Mail!",
   "show_map": "Karte anzeigen",
   "show_past_gigs": "Vergangene Auftritte anzeigen",

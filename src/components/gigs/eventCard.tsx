@@ -74,6 +74,8 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
           <p className="text-base md:text-lg">{(gig.comment as Comment)[i18n.language.substring(0, 2)]}</p>
         )}
       </div>
+
+      // TODO: Correct positioning in English on larger screens
       {status === 'next' && (
         <JackInTheBox className="" delay={700} duration={500}>
           <p className="absolute -bottom-7 -right-3 mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-base md:text-2xl dark:bg-bj-blue-light dark:text-bj-blue-dark">

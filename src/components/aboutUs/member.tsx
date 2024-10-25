@@ -12,7 +12,7 @@ interface MemberCardProps {
 
 export const MemberCard: React.FC<MemberCardProps> = ({ name, cldImg, colorSettings }) => {
   return (
-    <div className="flex w-full flex-col items-center opacity-80">
+    <div className="flex w-full flex-col items-center">
       <div
         className={`flex w-32 flex-col justify-center md:w-64 ${colorSettings.cardBg} p-1 md:p-2  text-center drop-shadow-2xl`}
       >

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
-import data from '../../../data/data.json';
+// import data from '../../../data/data.json';
 import { Button } from '../../components';
 import { ContentColorScheme, Gig } from '../../types';
 import EventCard from './eventCard';
@@ -12,7 +12,7 @@ interface AboutUsProps {
 
 export const Gigs = ({ colorSettings }: AboutUsProps) => {
   const { t } = useTranslation();
-  const [gigs] = useState<Gig[]>(data.gigs);
+  const [gigs] = useState<Gig[]>([]);
   // const [gigs, setGigs] = useState<Gig[]>([]);
   // const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -54,7 +54,7 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
             />
           ) : null}
         </div>
-        <div className="mx-8 grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 md:gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-8 grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3">
           {/* gig cards */}
 
           <Fade className="w-full" cascade direction={'up'} triggerOnce duration={700} damping={0.1}>
@@ -80,12 +80,21 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
         {!futureGigs.length && (
           <div>
             <Fade direction={'up'} triggerOnce duration={700} damping={0.1}>
-              <p className="text-sm mx-10 md:mx-24 mt-3 text-bj-blue-dark dark:text-bj-white md:text-3xl">{t('no_gigs')}</p>
+              <p className="mx-10 mt-3 text-sm text-bj-blue-dark dark:text-bj-white md:mx-24 md:text-3xl">
+                {t('no_gigs_planned')}
+              </p>
             </Fade>
           </div>
         )}
       </section>
     );
   }
-  return <p className="m-2 h-min font-fredericka text-bj-blue dark:text-bj-blue-light">No events available</p>;
+  return (
+    <section className="pb-12">
+      <div id="gigs" className="mb-12 flex flex-row items-center justify-between">
+        <h1 className={`ml-2 h-min font-fredericka text-4xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
+      </div>
+      <p className="m-2 h-min font-fredericka text-xl md:text-2xl text-bj-blue dark:text-bj-blue-light">{t('no_gigs_found')}</p>
+    </section>
+  );
 };
