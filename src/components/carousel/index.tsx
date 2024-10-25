@@ -57,7 +57,7 @@ const Carousel = () => {
                 .height(Math.min(Math.floor(windowHeight / 3), 576)),
             );
             return (
-              <div className="w-full flex-none" key={index}>
+              <div className="w-full flex-none md:px-7" key={index}>
                 <div className="flex items-center justify-center shadow-inner">
                   <AdvancedImage cldImg={image} />
                 </div>
