@@ -54,7 +54,7 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
             />
           ) : null}
         </div>
-        <div className="mx-8 grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3">
+        <div className="mx-2 grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 md:mx-8 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3">
           {/* gig cards */}
 
           <Fade className="w-full" cascade direction={'up'} triggerOnce duration={700} damping={0.1}>
@@ -94,7 +94,9 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
       <div id="gigs" className="mb-12 flex flex-row items-center justify-between">
         <h1 className={`ml-2 h-min font-fredericka text-4xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
       </div>
-      <p className="m-2 h-min font-fredericka text-xl md:text-2xl text-bj-blue dark:text-bj-blue-light">{t('no_gigs_found')}</p>
+      <p className="m-2 h-min font-fredericka text-xl text-bj-blue dark:text-bj-blue-light md:text-2xl">
+        {t('no_gigs_found')}
+      </p>
     </section>
   );
 };
