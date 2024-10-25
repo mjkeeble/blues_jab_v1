@@ -20,12 +20,11 @@ const App = () => {
       <div className="fixed left-0 top-0 z-[-10] h-full w-full bg-[url('/cracked-concrete-wall-textured-background-blue.jpg')] bg-cover bg-center"></div>
 
       <div id="App-container" className="absolute top-0 z-0 w-full overscroll-none">
-        <div className="mt-2 flex flex-row justify-center">
+        <ContentBlock bgColor={TRANSPARENT}>
+          <Jumbotron />
+        <div className="mt-10 flex flex-row justify-center">
           <Button onClick={changeLanguage} text={t('switch_language')} colors={colorScheme.TRANSPARENT.button} />
         </div>
-        <ContentBlock bgColor={TRANSPARENT}>
-          {/* <Navbar /> */}
-          <Jumbotron />
         </ContentBlock>
         <ContentBlock bgColor={WHITE}>
           <AboutUs colorSettings={colorScheme.WHITE} />
