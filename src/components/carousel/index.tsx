@@ -57,7 +57,7 @@ const Carousel = () => {
                 .height(Math.min(Math.floor(windowHeight / 3), 576)),
             );
             return (
-              <div className="w-full flex-none px-7" key={index}>
+              <div className="w-full flex-none" key={index}>
                 <div className="flex items-center justify-center shadow-inner">
                   <AdvancedImage cldImg={image} />
                 </div>
@@ -66,8 +66,8 @@ const Carousel = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-row justify-around mt-2">
-        <div className="grid grid-cols-2 items-center gap-7  bg-bj-blue-light rounded-full">
+      <div className="mt-2 flex flex-row justify-around">
+        <div className="grid grid-cols-2 items-center gap-7  rounded-full bg-bj-blue-light">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} color="bg-blue-dark" />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} color="bg-blue-dark" />
         </div>
