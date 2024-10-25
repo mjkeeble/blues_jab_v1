@@ -63,7 +63,7 @@ const Carousel = () => {
             );
             return (
               <div className="w-full flex-none md:px-7" key={index}>
-                <div className="flex items-center justify-center shadow-inner">
+                <div className="flex items-center justify-center">
                   <AdvancedImage cldImg={image} />
                 </div>
               </div>
