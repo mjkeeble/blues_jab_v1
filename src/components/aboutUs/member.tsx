@@ -20,7 +20,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({ name, cldImg, colorSetti
           <AdvancedImage cldImg={cldImg} className="h-full w-full object-cover" />
         </div>
         <h2 className={`mx-2 h-min pt-2 font-fredericka text-lg md:text-4xl ${colorSettings.cardH1}`}>{name}</h2>
-        <p className={`mx-2 text-xs md:text-2xl ${colorSettings.cardText}`}>{t(`instruments.${name}`)}</p>
+        <p className={`mx-2 text-xs md:text-xl ${colorSettings.cardText}`}>{t(`instruments.${name}`)}</p>
       </div>
     </div>
   );

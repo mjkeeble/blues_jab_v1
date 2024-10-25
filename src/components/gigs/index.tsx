@@ -54,10 +54,10 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
             />
           ) : null}
         </div>
-        <div className="mx-8 grid grid-cols-1 justify-items-center gap-x-4 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-8 grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 md:gap-y-16 md:grid-cols-2 lg:grid-cols-3">
           {/* gig cards */}
 
-          <Fade cascade direction={'up'} triggerOnce duration={700} damping={0.1}>
+          <Fade className="w-full" cascade direction={'up'} triggerOnce duration={700} damping={0.1}>
             {showPastGigs &&
               gigs
                 .filter((gig) => new Date(gig.dateTime) < new Date())
@@ -80,7 +80,7 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
         {!futureGigs.length && (
           <div>
             <Fade direction={'up'} triggerOnce duration={700} damping={0.1}>
-              <p className="text-md mx-24 mt-3 text-bj-blue-dark dark:text-bj-white md:text-3xl">{t('no_gigs')}</p>
+              <p className="text-sm mx-10 md:mx-24 mt-3 text-bj-blue-dark dark:text-bj-white md:text-3xl">{t('no_gigs')}</p>
             </Fade>
           </div>
         )}

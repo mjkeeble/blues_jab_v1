@@ -17,7 +17,7 @@ export const Button: React.FC<ButtonProps> = ({ text, onClick, colors}) => {
   return (
     <Fade delay={500} triggerOnce>
       <button
-        className={`${colors.bg} ${colors.text} hover:${colors.bgHover} h-10 rounded-full px-4`}
+        className={`${colors.bg} ${colors.text} hover:${colors.bgHover}  text-sm md:h-10 rounded-full py-2 md:py-2 px-4 hover:scale-y-110`}
         onClick={onClick}
       >
         {t(text)}
