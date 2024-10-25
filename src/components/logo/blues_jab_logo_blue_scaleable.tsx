@@ -1,7 +1,7 @@
 export const Logo = () => {
   return (
     <svg
-      className="fill-bj-blue-light max-w-lg mx-auto"
+      className="fill-bj-white max-w-lg mx-auto"
       version="1.1"
       viewBox="0 0 792 612"
       xmlns="http://www.w3.org/2000/svg"

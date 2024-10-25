@@ -45,7 +45,7 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
     return (
       <section className="pb-12">
         <div id="gigs" className="mb-12 flex flex-row items-center justify-between">
-          <h1 className={`ml-2 h-min font-fredericka text-2xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
+          <h1 className={`ml-2 h-min font-fredericka text-4xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
           {pastGigs.length ? (
             <Button
               text={showPastGigs ? 'hide_past_gigs' : 'show_past_gigs'}

@@ -30,7 +30,7 @@ export const Gallery = ({ colorSettings }: AboutUsProps) => {
 
   return (
     <section id="gallery">
-      <h1 className={`m-2 ml-4 pb-6 font-fredericka text-2xl ${colorSettings.h1} md:text-6xl`}>
+      <h1 className={`m-2 ml-4 pb-6 font-fredericka text-4xl ${colorSettings.h1} md:text-6xl`}>
         {t('sections.gallery')}
       </h1>
 

@@ -9,12 +9,12 @@ export const Contact = () => {
   return (
     <footer id="contact">
       <Zoom triggerOnce duration={500}>
-        <h1 className="m-2 text-center font-fredericka text-2xl text-bj-blue-light md:text-6xl">
+        <h1 className="m-2 text-center font-fredericka text-4xl text-bj-blue-light md:text-6xl">
           {t('sections.contact')}
         </h1>
       </Zoom>
 
-      <div className="my-14 flex w-full justify-center">
+      <div className="my-7 flex w-full justify-center md:my-14">
         <a
           href="mailto:mjkeeble@yahoo.de"
           className="text-md w-['100%'] font-normal text-bj-white underline md:text-3xl"
@@ -22,7 +22,7 @@ export const Contact = () => {
           {t('send_email')}
         </a>
       </div>
-      <div className="my-14 flex w-full justify-center">
+      <div className="my-7 flex w-full justify-center md:my-14">
         <a href="https://www.facebook.com/BluesJab" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon className="text-5xl" icon={faFacebookSquare} />
         </a>

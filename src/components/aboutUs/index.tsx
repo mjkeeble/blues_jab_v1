@@ -14,7 +14,7 @@ interface AboutUsProps {
 export const AboutUs = ({ colorSettings }: AboutUsProps) => {
   const { t } = useTranslation();
   // const [members, setMembers] = useState<Member[]>([]);
-  const [members,] = useState<Member[]>(data.members);
+  const [members] = useState<Member[]>(data.members);
   // const apiUrl = import.meta.env.VITE_API_URL;
 
   // useEffect(() => {
@@ -30,10 +30,10 @@ export const AboutUs = ({ colorSettings }: AboutUsProps) => {
 
   //   fetchMembers();
   // }, [apiUrl]);
-// 
+  //
   return (
     <section id="aboutUs">
-      <h1 className={`${colorSettings.h1} ml-2 h-min font-fredericka text-2xl md:text-6xl`}>{t('sections.about')}</h1>
+      <h1 className={`${colorSettings.h1} ml-2 h-min font-fredericka text-4xl md:text-6xl`}>{t('sections.about')}</h1>
 
       <div className={`mx-4 mb-12 pl-2 md:mx-16 ${colorSettings.text}`}>
         <p className="text-md mt-8 md:text-2xl">{t('about.paragraph1')}</p>
@@ -43,7 +43,7 @@ export const AboutUs = ({ colorSettings }: AboutUsProps) => {
 
       {/* member cards */}
 
-      <div className="mx-8 grid grid-cols-1 gap-x-4 gap-y-16 pt-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-8 grid grid-cols-2 gap-x-4 gap-y-16 pt-8 lg:grid-cols-3">
         <Fade cascade direction="up" damping={0.1} triggerOnce>
           {members
             .sort((a, b) => a.name.localeCompare(b.name))

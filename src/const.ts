@@ -12,13 +12,13 @@ export const colorScheme: ContentBlockColors = {
   TRANSPARENT: {
     body: 'backdrop-opacity-100',
     margins: 'backdrop-opacity-100',
-    h1: 'text-bj-blue-light',
+    h1: 'text-bj-blue-dark',
     text: 'text-bj-white',
     cardBg: 'bg-bj-blue-dark',
     cardH1: 'text-bj-blue-light',
     cardText: 'text-bj-blue-light',
     button: {
-      bg: 'bg-bj-white',
+      bg: 'bg-bj-blue-light',
       text: 'text-bj-blue-dark',
       bgHover: 'bg-bj-blue-mid',
     },
@@ -54,7 +54,7 @@ export const colorScheme: ContentBlockColors = {
   BLUE_DARK: {
     body: 'bg-bj-blue-dark',
     margins: 'backdrop-opacity-100',
-    h1: 'text-bj-blue-light',
+    h1: 'text-bj-white',
     text: 'text-bj-white',
     cardBg: 'bg-bj-blue-mid',
     cardH1: 'text-bj-blue-light',
@@ -68,7 +68,7 @@ export const colorScheme: ContentBlockColors = {
   WHITE: {
     body: 'bg-bj-white',
     margins: 'bg-bj-white opacity-40',
-    h1: 'text-bj-blue-mid',
+    h1: 'text-bj-blue-dark',
     text: 'text-bj-blue-dark',
     cardBg: 'bg-bj-green-dark',
     cardH1: 'text-bj-white',
