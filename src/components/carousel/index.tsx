@@ -66,8 +66,8 @@ const Carousel = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-row justify-around">
-        <div className="grid grid-cols-2 items-center gap-7">
+      <div className="flex flex-row justify-around mt-2">
+        <div className="grid grid-cols-2 items-center gap-7  bg-bj-blue-light rounded-full">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} color="bg-blue-dark" />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} color="bg-blue-dark" />
         </div>
