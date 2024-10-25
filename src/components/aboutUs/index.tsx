@@ -1,10 +1,11 @@
 import { fill } from '@cloudinary/url-gen/actions/resize';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
+import data from '../../../data/data.json';
 import { cld } from '../../services/cloudinaryInstance';
-import {ContentColorScheme, Member} from '../../types';
-import {MemberCard} from './member';
+import { ContentColorScheme, Member } from '../../types';
+import { MemberCard } from './member';
 
 interface AboutUsProps {
   colorSettings: ContentColorScheme;
@@ -12,31 +13,29 @@ interface AboutUsProps {
 
 export const AboutUs = ({ colorSettings }: AboutUsProps) => {
   const { t } = useTranslation();
-  const [members, setMembers] = useState<Member[]>([]);
-  console.log(members);
+  // const [members, setMembers] = useState<Member[]>([]);
+  const [members,] = useState<Member[]>(data.members);
+  // const apiUrl = import.meta.env.VITE_API_URL;
 
-  useEffect(() => {
-    const fetchMembers = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/members');
-        const data = await response.json();
-        setMembers(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchMembers = async () => {
+  //     try {
+  //       const response = await fetch(`${apiUrl}\\members`);
+  //       const data = await response.json();
+  //       setMembers(data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
 
-    fetchMembers();
-  }, []);
-
+  //   fetchMembers();
+  // }, [apiUrl]);
+// 
   return (
     <section id="aboutUs">
+      <h1 className={`${colorSettings.h1} ml-2 h-min font-fredericka text-2xl md:text-6xl`}>{t('sections.about')}</h1>
 
-      <h1 className={`${colorSettings.h1} ml-2 h-min font-fredericka text-2xl md:text-6xl`}>
-        {t('sections.about')}
-      </h1>
-
-			<div className={`mx-4 mb-12 pl-2 md:mx-16 ${colorSettings.text}`}>
+      <div className={`mx-4 mb-12 pl-2 md:mx-16 ${colorSettings.text}`}>
         <p className="text-md mt-8 md:text-2xl">{t('about.paragraph1')}</p>
         <p className="text-md mt-8 md:text-2xl">{t('about.paragraph2')}</p>
         <p className="text-md mt-8 md:text-2xl">{t('about.paragraph3')}</p>
@@ -50,10 +49,8 @@ export const AboutUs = ({ colorSettings }: AboutUsProps) => {
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((member) => {
               const portrait = cld.image(`bluesjab/${member.image}`);
-              
-              return (
-								<MemberCard name={member.name} cldImg={portrait.resize(fill())} colorSettings={colorSettings} />
-              );
+
+              return <MemberCard name={member.name} cldImg={portrait.resize(fill())} colorSettings={colorSettings} />;
             })}
         </Fade>
       </div>

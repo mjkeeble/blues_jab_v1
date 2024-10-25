@@ -3,12 +3,11 @@ import { fit } from '@cloudinary/url-gen/actions/resize';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect, useState } from 'react';
+import data from '../../../data/data.json';
 import { cld } from '../../services/cloudinaryInstance';
-import { NextButton, PrevButton } from './CarouselButtons';
-import {usePrevNextButtons} from './buttonHandlers';
 import { Photo } from '../../types';
-// import {focusOn} from '@cloudinary/url-gen/qualifiers/gravity';
-// import {FocusOn} from '@cloudinary/url-gen/qualifiers/focusOn';
+import { NextButton, PrevButton } from './CarouselButtons';
+import { usePrevNextButtons } from './buttonHandlers';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
@@ -16,21 +15,23 @@ const Carousel = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
-  const [photos, setPhotos] = useState<Photo[]>([]);
+  const [photos] = useState<Photo[]>(data.photos);
+  // const [photos, setPhotos] = useState<Photo[]>([]);
+  // const apiUrl = import.meta.env.VITE_API_URL;
 
-	useEffect(() => {
-		const fetchPhotos = async () => {
-			try {
-				const response = await fetch("http://localhost:3000/photos");
-				const data = await response.json();
-				setPhotos(data);
-			} catch (error) {
-				console.error(error);
-			}
-		};
+  // useEffect(() => {
+  //   const fetchPhotos = async () => {
+  //     try {
+  //       const response = await fetch(`${apiUrl}\\photos`);
+  //       const data = await response.json();
+  //       setPhotos(data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
 
-		fetchPhotos();
-	}, []);
+  //   fetchPhotos();
+  // }, [apiUrl]);
 
   const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 

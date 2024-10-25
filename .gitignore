@@ -28,3 +28,6 @@ dist-ssr
 
 # non-program files
 *.pptx
+
+# config files
+.env

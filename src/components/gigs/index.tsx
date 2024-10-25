@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { Fade } from "react-awesome-reveal";
-import { useTranslation } from "react-i18next";
-import { Button } from "../../components";
-import { ContentColorScheme, Gig } from "../../types";
-import EventCard from "./eventCard";
+import { useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
+import { useTranslation } from 'react-i18next';
+import data from '../../../data/data.json';
+import { Button } from '../../components';
+import { ContentColorScheme, Gig } from '../../types';
+import EventCard from './eventCard';
 
 interface AboutUsProps {
   colorSettings: ContentColorScheme;
@@ -11,24 +12,26 @@ interface AboutUsProps {
 
 export const Gigs = ({ colorSettings }: AboutUsProps) => {
   const { t } = useTranslation();
-  const [gigs, setGigs] = useState<Gig[]>([]);
+  const [gigs] = useState<Gig[]>(data.gigs);
+  // const [gigs, setGigs] = useState<Gig[]>([]);
+  // const apiUrl = import.meta.env.VITE_API_URL;
 
-  useEffect(() => {
-    const fetchGigs = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/gigs');
-        const data = await response.json();
-        const sortedData = data.sort(
-          (a: Gig, b: Gig) => new Date(a.dateTime).getTime() - new Date(b.dateTime).getTime(),
-        );
-        setGigs(sortedData);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchGigs = async () => {
+  //     try {
+  //       const response = await fetch(`${apiUrl}\\gigs`);
+  //       const data = await response.json();
+  //       const sortedData = data.sort(
+  //         (a: Gig, b: Gig) => new Date(a.dateTime).getTime() - new Date(b.dateTime).getTime(),
+  //       );
+  //       setGigs(sortedData);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
 
-    fetchGigs();
-  }, []);
+  //   fetchGigs();
+  // }, [apiUrl]);
 
   const pastGigs = gigs.filter((gig) => new Date(gig.dateTime) < new Date());
   const futureGigs = gigs.filter((gig) => new Date(gig.dateTime) >= new Date());
@@ -41,10 +44,14 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
   if (gigs.length) {
     return (
       <section className="pb-12">
-        <div id="gigs" className="flex flex-row items-center justify-between mb-12">
+        <div id="gigs" className="mb-12 flex flex-row items-center justify-between">
           <h1 className={`ml-2 h-min font-fredericka text-2xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
           {pastGigs.length ? (
-            <Button text={showPastGigs ? 'hide_past_gigs' : 'show_past_gigs'} onClick={handleClick} colors={ colorSettings.button} />
+            <Button
+              text={showPastGigs ? 'hide_past_gigs' : 'show_past_gigs'}
+              onClick={handleClick}
+              colors={colorSettings.button}
+            />
           ) : null}
         </div>
         <div className="mx-8 grid grid-cols-1 justify-items-center gap-x-4 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
