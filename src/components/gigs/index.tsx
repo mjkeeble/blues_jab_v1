@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
-// import data from '../../../data/data.json';
+import data from '../../../data/data.json';
 import { Button } from '../../components';
 import { ContentColorScheme, Gig } from '../../types';
 import EventCard from './eventCard';
@@ -12,7 +12,7 @@ interface AboutUsProps {
 
 export const Gigs = ({ colorSettings }: AboutUsProps) => {
   const { t } = useTranslation();
-  const [gigs] = useState<Gig[]>([]);
+  const [gigs] = useState<Gig[]>(data.gigs);
   // const [gigs, setGigs] = useState<Gig[]>([]);
   // const apiUrl = import.meta.env.VITE_API_URL;
 
