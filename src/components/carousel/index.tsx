@@ -52,32 +52,30 @@ const Carousel = () => {
   }, []);
 
   return (
-    <section className="mx-auto max-w-6xl">
-      <div className="w-full overflow-hidden" ref={emblaRef}>
-        <div className="flex">
-          {photos.map((photo, index) => {
-            const image = cld.image(`bluesjab/photos/${photo.fileId}`).resize(
-              fit()
-                .width(Math.min(windowWidth, 1154))
-                .height(Math.min(Math.floor(windowHeight / 3), 576)),
-            );
-            return (
-              <div className="w-full flex-none md:px-7" key={index}>
-                <div className="flex items-center justify-center">
-                  <AdvancedImage cldImg={image} />
-                </div>
+    <div className="w-full overflow-hidden" ref={emblaRef}>
+      <div className="flex">
+        {photos.map((photo, index) => {
+          const image = cld.image(`bluesjab/photos/${photo.fileId}`).resize(
+            fit()
+              .width(Math.min(windowWidth, 1154))
+              .height(Math.min(Math.floor(windowHeight * 0.75 ), 576)),
+          );
+          return (
+            <div className="w-full flex-none md:px-7" key={index}>
+              <div className="flex items-center justify-center">
+                <AdvancedImage cldImg={image} />
               </div>
-            );
-          })}
-        </div>
-        <div className="mt-2 flex flex-row justify-around">
-          <div className="grid grid-cols-2 items-center gap-7  rounded-full bg-bj-blue-light">
-            <PrevButton onClick={scrollPrev} color="bg-blue-dark" />
-            <NextButton onClick={scrollNext} color="bg-blue-dark" />
-          </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="mt-2 flex flex-row justify-around">
+        <div className="grid grid-cols-2 items-center gap-7  rounded-full bg-bj-blue-light">
+          <PrevButton onClick={scrollPrev} color="bg-blue-dark" />
+          <NextButton onClick={scrollNext} color="bg-blue-dark" />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
