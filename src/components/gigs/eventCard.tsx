@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 import { Gig } from '../../types';
 
+// TODO: Add location icon as alternative to text link on small screens
+// <FontAwesomeIcon icon="fa-solid fa-map-location-dot" />
+// <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+
 type EventStatus = 'past' | 'next' | 'future';
 
 type EventCardProps = {
@@ -48,7 +52,7 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
   return (
     <>
       <div
-        className={`relative ${textColors[status]} w-full rounded p-3 md:p-6 md:min-h-[300px] md:w-64 ${bgColors[status]} flex flex-col justify-between opacity-75 drop-shadow-2xl`}
+        className={`relative ${textColors[status]} w-full rounded p-3 md:min-h-[300px] md:w-64 md:p-6 ${bgColors[status]} flex flex-col justify-between opacity-75 drop-shadow-2xl`}
       >
         <div className="flex flex-row justify-between font-semibold">
           <p className="text-base md:text-xl">{dateTime.toLocaleDateString(i18n.language, dateDisplayOptions)}</p>
@@ -56,8 +60,8 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
             <p className="text-base md:text-xl">{dateTime.toLocaleTimeString(i18n.language, timeDisplayOptions)}</p>
           )}
         </div>
-        <p className="mt-4 font-fredericka text-lg md:text-2xl">{`${gig.venue},`}</p>
-        <p className="font-fredericka text-lg md:text-2xl">{gig.town}</p>
+        <p className="mt-4 font-fredericka text-xl md:text-2xl">{`${gig.venue},`}</p>
+        <p className="font-fredericka text-xl md:text-2xl">{gig.town}</p>
         {gig.mapUrl && (
           <a href={gig.mapUrl} target="_blank" rel="noopener">
             <p
@@ -77,10 +81,12 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
 
       {/* TODO: Correct positioning of 'next gig' overlay in English on larger screens */}
       {status === 'next' && (
-        <JackInTheBox className="" delay={700} duration={500}>
-          <p className="absolute -bottom-7 -right-3 mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-base md:text-2xl dark:bg-bj-blue-light dark:text-bj-blue-dark">
-            {t('next_gig')}
-          </p>
+        <JackInTheBox
+          className=""
+          delay={700}
+          duration={500}
+        >
+          <p className="absolute -bottom-7 -right-3 mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-base dark:bg-bj-blue-light dark:text-bj-blue-dark md:text-2xl">{t('next_gig')}</p>
         </JackInTheBox>
       )}
     </>
