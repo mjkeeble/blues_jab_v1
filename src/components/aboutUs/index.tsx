@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 import data from '../../../data/data.json';
 import { cld } from '../../services/cloudinaryInstance';
 import { ContentColorScheme, Member } from '../../types';
-import {MemberCard} from './member'
 import { SectionHeading } from '../index';
+import { MemberCard } from './member';
 
 type AboutUsProps = {
   colorSettings: ContentColorScheme;
-}
+};
 
 export const AboutUs = ({ colorSettings }: AboutUsProps) => {
   const { t } = useTranslation();
@@ -35,9 +35,8 @@ export const AboutUs = ({ colorSettings }: AboutUsProps) => {
   return (
     <section id="aboutUs">
       <SectionHeading textColor={colorSettings.h1} text={t('sections.about')} />
-      
 
-      <div className={`text-sm md:text-base mb-12 mx-4 pl-2 md:mx-16 ${colorSettings.text}`}>
+      <div className={`mx-4 mb-12 pl-2 text-sm md:mx-16 md:text-base ${colorSettings.text}`}>
         <p className="mt-8">{t('about.paragraph1')}</p>
         <p className="mt-8">{t('about.paragraph2')}</p>
         <p className="mt-8">{t('about.paragraph3')}</p>
@@ -52,7 +51,14 @@ export const AboutUs = ({ colorSettings }: AboutUsProps) => {
             .map((member) => {
               const portrait = cld.image(`bluesjab/${member.image}`);
 
-              return <MemberCard name={member.name} cldImg={portrait.resize(fill())} colorSettings={colorSettings} />;
+              return (
+                <MemberCard
+                  key={member.name}
+                  name={member.name}
+                  cldImg={portrait.resize(fill())}
+                  colorSettings={colorSettings}
+                />
+              );
             })}
         </Fade>
       </div>

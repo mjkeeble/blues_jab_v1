@@ -71,9 +71,10 @@ const Carousel = ({ colorSettings }: GalleryProps) => {
               <div className="flex flex-col items-center justify-center">
                 <div>
                   <AdvancedImage cldImg={image} />
-                  {photo.source ? (
-                    <p className={`${colorSettings.text} text-right text-xs`}>{`${t('source')}: ${photo.source}`}</p>
-                  ) : null}
+
+                  <p className={`${colorSettings.text} text-right text-xs`}>{`${t('source')}: ${
+                    photo.source || 'Blues Jab'
+                  }`}</p>
                 </div>
               </div>
             </div>
