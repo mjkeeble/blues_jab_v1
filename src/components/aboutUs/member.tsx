@@ -19,8 +19,8 @@ export const MemberCard: React.FC<MemberCardProps> = ({ name, cldImg, colorSetti
         <div className="aspect-square h-36 object-cover  md:h-64">
           <AdvancedImage cldImg={cldImg} className="h-full w-full object-cover" />
         </div>
-        <h2 className={`mx-2 h-min pt-2 font-fredericka text-lg md:text-4xl ${colorSettings.cardH1}`}>{name}</h2>
-        <p className={`mb-2 text-xs md:mb-0 md:text-xl ${colorSettings.cardText}`}>{t(`instruments.${name}`)}</p>
+        <h2 className={`mx-2 h-min pt-2 font-fredericka text-lg md:text-2xl ${colorSettings.cardH1}`}>{name}</h2>
+        <p className={`mb-2 text-xs md:mb-0 md:text-base ${colorSettings.cardText}`}>{t(`instruments.${name}`)}</p>
       </div>
     </div>
   );

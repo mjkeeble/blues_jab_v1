@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import data from '../../../data/data.json';
-import { Button } from '../../components';
+import { Button, SectionHeading } from '../../components';
 import { ContentColorScheme, Gig } from '../../types';
 import EventCard from './eventCard';
 
@@ -44,14 +44,16 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
   if (gigs.length) {
     return (
       <section className="pb-12">
-        <div id="gigs" className="mb-12 flex flex-row items-center justify-between">
-          <h1 className={`ml-2 h-min font-fredericka text-4xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
+        <div id="gigs" className="flex flex-row items-center justify-between">
+          <SectionHeading textColor={colorSettings.h1} text={t('sections.gigs')} />
           {pastGigs.length ? (
-            <Button
-              text={showPastGigs ? 'hide_past_gigs' : 'show_past_gigs'}
-              onClick={handleClick}
-              colors={colorSettings.button}
-            />
+            <div className='mb-12'>
+              <Button
+                text={showPastGigs ? 'hide_past_gigs' : 'show_past_gigs'}
+                onClick={handleClick}
+                colors={colorSettings.button}
+              />
+            </div>
           ) : null}
         </div>
         <div className="mx-2 grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 md:mx-8 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3">

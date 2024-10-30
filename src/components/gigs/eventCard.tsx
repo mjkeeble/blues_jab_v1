@@ -52,41 +52,39 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
   return (
     <>
       <div
-        className={`relative ${textColors[status]} w-full rounded p-3 md:min-h-[300px] md:w-64 md:p-6 ${bgColors[status]} flex flex-col justify-between opacity-75 drop-shadow-2xl`}
+        className={`relative ${textColors[status]} w-full rounded p-3 md:min-h-[300px] md:w-64 md:p-6 ${bgColors[status]} flex flex-col justify-start opacity-75 drop-shadow-2xl`}
       >
-        <div className="flex flex-row justify-between font-semibold">
-          <p className="text-base md:text-xl">{dateTime.toLocaleDateString(i18n.language, dateDisplayOptions)}</p>
-          {hasNoTime(dateTime.toISOString()) || (
-            <p className="text-base md:text-xl">{dateTime.toLocaleTimeString(i18n.language, timeDisplayOptions)}</p>
+        <div className="flex flex-row justify-between text-sm font-semibold md:text-base">
+          <p>{dateTime.toLocaleDateString(i18n.language, dateDisplayOptions)}</p>
+          {hasNoTime(dateTime.toISOString()) || <p>{dateTime.toLocaleTimeString(i18n.language, timeDisplayOptions)}</p>}
+        </div>
+        <div>
+          <p className="mt-4 font-fredericka text-base md:text-xl">{`${gig.venue},`}</p>
+          <p className="font-fredericka text-base md:text-xl">{gig.town}</p>
+          {gig.mapUrl && (
+            <a href={gig.mapUrl} target="_blank" rel="noopener">
+              <p
+                className={`text-sm md:text-base ${
+                  ['future', 'next'].includes(status) ? 'text-bj-blue-light' : 'text-bj-blue-dark'
+                } underline underline-offset-2`}
+              >
+                {t('show_map')}
+              </p>
+            </a>
           )}
         </div>
-        <p className="mt-4 font-fredericka text-xl md:text-2xl">{`${gig.venue},`}</p>
-        <p className="font-fredericka text-xl md:text-2xl">{gig.town}</p>
-        {gig.mapUrl && (
-          <a href={gig.mapUrl} target="_blank" rel="noopener">
-            <p
-              className={`text-md ${
-                ['future', 'next'].includes(status) ? 'text-bj-blue-light' : 'text-bj-blue-dark'
-              } underline underline-offset-2`}
-            >
-              {t('show_map')}
-            </p>
-          </a>
-        )}
 
         {gig.comment && (
-          <p className="text-base md:text-lg">{(gig.comment as Comment)[i18n.language.substring(0, 2)]}</p>
+          <p className="grow-1 pt-4 text-sm  md:text-base">{(gig.comment as Comment)[i18n.language.substring(0, 2)]}</p>
         )}
       </div>
 
       {/* TODO: Correct positioning of 'next gig' overlay in English on larger screens */}
       {status === 'next' && (
-        <JackInTheBox
-          className=""
-          delay={700}
-          duration={500}
-        >
-          <p className="absolute -bottom-7 -right-3 mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-base dark:bg-bj-blue-light dark:text-bj-blue-dark md:text-2xl">{t('next_gig')}</p>
+        <JackInTheBox className="" delay={700} duration={500}>
+          <p className="absolute -bottom-7 -right-3 mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-base dark:bg-bj-blue-light dark:text-bj-blue-dark md:text-2xl">
+            {t('next_gig')}
+          </p>
         </JackInTheBox>
       )}
     </>

@@ -20,11 +20,11 @@ const App = () => {
       <div className="fixed left-0 top-0 z-[-10] h-full w-full bg-[url('/cracked-concrete-wall-textured-background-blue.jpg')] bg-cover bg-center"></div>
 
       <div id="App-container" className="absolute top-0 z-0 w-full overscroll-none">
-        <ContentBlock bgColor={TRANSPARENT}>
-          <Jumbotron />
-        <div className="mt-10 flex flex-row justify-center">
+        <ContentBlock bgColor={TRANSPARENT} reducedPadding='top'>
+        <div className="relative flex flex-row justify-center pt-4 pb-16">
           <Button onClick={changeLanguage} text={t('switch_language')} colors={colorScheme.TRANSPARENT.button} />
         </div>
+          <Jumbotron />
         </ContentBlock>
         <ContentBlock bgColor={WHITE}>
           <AboutUs colorSettings={colorScheme.WHITE} />
@@ -37,7 +37,7 @@ const App = () => {
         <ContentBlock bgColor={WHITE}>
           <Gallery colorSettings={colorScheme.WHITE} />
         </ContentBlock>
-        <ContentBlock bgColor={BLUE_DARK} isFooter={true}>
+        <ContentBlock bgColor={BLUE_DARK} reducedPadding='bottom'>
           <Contact />
         </ContentBlock>
       </div>

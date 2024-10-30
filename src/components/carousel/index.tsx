@@ -3,18 +3,24 @@ import { fit } from '@cloudinary/url-gen/actions/resize';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import data from '../../../data/data.json';
 import { cld } from '../../services/cloudinaryInstance';
-import { Photo } from '../../types';
+import { ContentColorScheme, Photo } from '../../types';
 import { NextButton, PrevButton } from './CarouselButtons';
+
+type GalleryProps = {
+  colorSettings: ContentColorScheme;
+};
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
-const Carousel = () => {
+const Carousel = ({ colorSettings }: GalleryProps) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
   const [photos] = useState<Photo[]>(data.photos);
+  const { t } = useTranslation();
   // const [photos, setPhotos] = useState<Photo[]>([]);
   // const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -58,12 +64,17 @@ const Carousel = () => {
           const image = cld.image(`bluesjab/photos/${photo.fileId}`).resize(
             fit()
               .width(Math.min(windowWidth, 1154))
-              .height(Math.min(Math.floor(windowHeight * 0.75 ), 576)),
+              .height(Math.min(Math.floor(windowHeight * 0.75), 576)),
           );
           return (
             <div className="w-full flex-none md:px-7" key={index}>
-              <div className="flex items-center justify-center">
-                <AdvancedImage cldImg={image} />
+              <div className="flex flex-col items-center justify-center">
+                <div>
+                  <AdvancedImage cldImg={image} />
+                  {photo.source ? (
+                    <p className={`${colorSettings.text} text-right text-xs`}>{`${t('source')}: ${photo.source}`}</p>
+                  ) : null}
+                </div>
               </div>
             </div>
           );

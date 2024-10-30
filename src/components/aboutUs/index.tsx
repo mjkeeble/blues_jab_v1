@@ -5,9 +5,10 @@ import { useTranslation } from 'react-i18next';
 import data from '../../../data/data.json';
 import { cld } from '../../services/cloudinaryInstance';
 import { ContentColorScheme, Member } from '../../types';
-import { MemberCard } from './member';
+import {MemberCard} from './member'
+import { SectionHeading } from '../index';
 
-interface AboutUsProps {
+type AboutUsProps = {
   colorSettings: ContentColorScheme;
 }
 
@@ -33,12 +34,13 @@ export const AboutUs = ({ colorSettings }: AboutUsProps) => {
   //
   return (
     <section id="aboutUs">
-      <h1 className={`${colorSettings.h1} ml-2 h-min font-fredericka text-4xl md:text-6xl`}>{t('sections.about')}</h1>
+      <SectionHeading textColor={colorSettings.h1} text={t('sections.about')} />
+      
 
-      <div className={`mx-4 mb-12 pl-2 md:mx-16 ${colorSettings.text}`}>
-        <p className="text-md mt-8 md:text-2xl">{t('about.paragraph1')}</p>
-        <p className="text-md mt-8 md:text-2xl">{t('about.paragraph2')}</p>
-        <p className="text-md mt-8 md:text-2xl">{t('about.paragraph3')}</p>
+      <div className={`text-sm md:text-base mb-12 mx-4 pl-2 md:mx-16 ${colorSettings.text}`}>
+        <p className="mt-8">{t('about.paragraph1')}</p>
+        <p className="mt-8">{t('about.paragraph2')}</p>
+        <p className="mt-8">{t('about.paragraph3')}</p>
       </div>
 
       {/* member cards */}

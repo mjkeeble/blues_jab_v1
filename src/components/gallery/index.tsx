@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import data from '../../../data/data.json';
 import { ContentColorScheme, Video } from '../../types';
 import Carousel from '../carousel';
+import {SectionHeading} from '../contentBlock';
 
 interface AboutUsProps {
   colorSettings: ContentColorScheme;
@@ -30,11 +31,10 @@ export const Gallery = ({ colorSettings }: AboutUsProps) => {
 
   return (
     <section id="gallery">
-      <h1 className={`m-2 ml-4 pb-6 font-fredericka text-4xl ${colorSettings.h1} md:text-6xl`}>
-        {t('sections.gallery')}
-      </h1>
+      <SectionHeading textColor={colorSettings.h1} text={t('sections.gallery')} />
 
-      <Carousel />
+
+      <Carousel colorSettings={colorSettings} />
 
       <div className="mt-10 flex flex-col items-center">
         {videos.map((video, index) => (

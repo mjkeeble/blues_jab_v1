@@ -21,6 +21,7 @@ export type Member = {
 
 export type Photo = {
   fileId: string;
+  source?: string;
 };
 
 export type Video = {
