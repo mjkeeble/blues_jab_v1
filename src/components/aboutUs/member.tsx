@@ -14,9 +14,9 @@ export const MemberCard: React.FC<MemberCardProps> = ({ name, cldImg, colorSetti
   return (
     <div className="flex w-full flex-col items-center">
       <div
-        className={`flex w-36 flex-col justify-center md:w-64 ${colorSettings.cardBg} p-1 text-center  drop-shadow-2xl md:p-2`}
+        className={`flex w-36 flex-col justify-center md:w-64 ${colorSettings.cardBg} p-1 text-center drop-shadow-2xl md:p-2`}
       >
-        <div className="aspect-square h-36 object-cover  md:h-64">
+        <div className="aspect-square h-36 overflow-hidden md:h-64">
           <AdvancedImage cldImg={cldImg} className="h-full w-full object-cover" />
         </div>
         <h2 className={`mx-2 h-min pt-2 font-fredericka text-lg md:text-2xl ${colorSettings.cardH1}`}>{name}</h2>
