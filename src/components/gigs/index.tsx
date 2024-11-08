@@ -47,7 +47,7 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
         <div id="gigs" className="flex flex-row items-center justify-between">
           <SectionHeading textColor={colorSettings.h1} text={t('sections.gigs')} />
           {pastGigs.length ? (
-            <div className='mb-12'>
+            <div className="mb-12">
               <Button
                 text={showPastGigs ? 'hide_past_gigs' : 'show_past_gigs'}
                 onClick={handleClick}

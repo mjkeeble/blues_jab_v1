@@ -21,9 +21,8 @@ export default {
       fontFamily: {
         fredericka: ['Fredericka the Great', 'sans-serif'],
       },
-      backgroundImage: {
-        'radial-gradient': 'radial-gradient(circle, rgba(206,201,255,0.85) 7%, rgba(108,186,162,0.85) 160%)',
-        'radial-gradient-dark': 'radial-gradient(circle, rgba(0, 5, 100, 0.8) 7%, rgba(6,132,136,0.8) 160%)',
+      minHeight: {
+        '2/3-screen': '66vh', // Custom utility for 2/3 of viewport height
       },
     },
   },
