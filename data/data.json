@@ -39,7 +39,10 @@
     { "fileId": "240406_Blues_Jab_in_Babelsberg_3" },
     { "fileId": "240406_Blues_Jab_in_Babelsberg_4" }
   ],
-  "videos": [{ "title": "Blues Jab @ Blues Camp 2024", "urlRef": "Nz1xR-jV_88?start=56" }],
+  "videos": [
+    { "title": "Blues Jab - Bluescamp 2024", "urlRef": "Nz1xR-jV_88?start=56" },
+    { "title": "Blues Jab - 28.09.2024 - Best of Kulturscheune Rangsdorf", "urlRef": "kOFxdFWbsmg" }
+  ],
   "gigs": [
     {
       "index": 0,
