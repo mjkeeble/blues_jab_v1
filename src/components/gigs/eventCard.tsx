@@ -81,7 +81,7 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
 
       {/* TODO: Correct positioning of 'next gig' overlay in English on larger screens */}
       {status === 'next' && (
-        <JackInTheBox className="absolute -bottom-2 right-10 z-10 " delay={700} duration={500}>
+        <JackInTheBox className="absolute -bottom-2 right-0 z-10 " delay={700} duration={500}>
           <p className="mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-base dark:bg-bj-blue-light dark:text-bj-blue-dark md:text-2xl">
             {t('next_gig')}
           </p>
