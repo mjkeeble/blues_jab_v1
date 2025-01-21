@@ -16,7 +16,7 @@ export const Contact = () => {
 
       <div className="my-4 flex w-full justify-center md:my-14">
         <a
-          href="mailto:mjkeeble@yahoo.de"
+          href="mailto:bluesjab@keeble.email"
           className="text-md w-['100%'] font-normal text-bj-white underline md:text-3xl hover:scale-110"
         >
           {t('send_email')}
