@@ -40,6 +40,7 @@
     { "fileId": "240406_Blues_Jab_in_Babelsberg_4" }
   ],
   "videos": [
+    { "title": "Blues Jab - Promo", "urlRef": "6Er3CZcvBug" },
     { "title": "Blues Jab - Bluescamp 2024", "urlRef": "Nz1xR-jV_88?start=56" },
     { "title": "Blues Jab - 28.09.2024 - Best of Kulturscheune Rangsdorf", "urlRef": "kOFxdFWbsmg" }
   ],
@@ -109,6 +110,28 @@
       "town": "Potsdam Babelsberg DE",
       "dateTime": "2025-04-05T19:00:00",
       "mapUrl": "https://maps.google.com/maps?q=die%20alte%20garage%20babelsberg"
+    },
+    {
+      "index": 7,
+      "venue": "Kulturverein Rangsdorf",
+      "town": "Rangsdorf DE",
+      "dateTime": "2025-07-18T19:00:00",
+      "mapUrl": "https://www.google.com/maps/place/15834+Rangsdorf/",
+      "comment": {
+        "en": "Rangsdorf 650-year celebration - to be confirmed",
+        "de": "650 Jahre Rangsdorf - noch zu bestätigen"
+      }
+    },
+    {
+      "index": 8,
+      "venue": "Lindenpark",
+      "town": "Potsdam Babelsberg DE",
+      "dateTime": "2025-12-13T19:00:00",
+      "mapUrl": "https://maps.google.com/maps?q=lindenpark%20babelsberg",
+      "comment": {
+        "en": "To be confirmed",
+        "de": "Noch zu bestätigen"
+      }
     }
   ]
 }
