@@ -50,10 +50,10 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
   };
 
   return (
-    <>
-      <div
-        className={`relative ${textColors[status]} w-full rounded p-3 md:min-h-[300px] md:w-64 md:p-6 ${bgColors[status]} flex flex-col justify-start opacity-75 drop-shadow-2xl`}
-      >
+    <div
+      className={`relative ${textColors[status]} w-full rounded p-3 md:min-h-[300px] md:w-64 md:p-6 ${bgColors[status]} flex flex-col justify-start opacity-75 drop-shadow-2xl`}
+    >
+      <div>
         <div className="flex flex-row justify-between text-sm font-semibold md:text-base">
           <p>{dateTime.toLocaleDateString(i18n.language, dateDisplayOptions)}</p>
           {hasNoTime(dateTime.toISOString()) || <p>{dateTime.toLocaleTimeString(i18n.language, timeDisplayOptions)}</p>}
@@ -81,13 +81,13 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
 
       {/* TODO: Correct positioning of 'next gig' overlay in English on larger screens */}
       {status === 'next' && (
-        <JackInTheBox className="absolute -bottom-7 right-10 " delay={700} duration={500}>
+        <JackInTheBox className="absolute -bottom-2 right-10 z-10 " delay={700} duration={500}>
           <p className="mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-base dark:bg-bj-blue-light dark:text-bj-blue-dark md:text-2xl">
             {t('next_gig')}
           </p>
         </JackInTheBox>
       )}
-    </>
+    </div>
   );
 };
 
