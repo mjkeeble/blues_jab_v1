@@ -77,6 +77,17 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
         {gig.comment && (
           <p className="grow-1 pt-4 text-sm  md:text-base">{(gig.comment as Comment)[i18n.language.substring(0, 2)]}</p>
         )}
+
+        {gig.link && (
+          <a
+            href={gig.link}
+            target="_blank"
+            rel="noopener"
+            className={`my-6 inline-block rounded border bg-bj-red px-4 py-2 font-semibold text-bj-white drop-shadow-lg hover:bg-bj-red-dark md:text-base`}
+          >
+            {t(gig.linkType || 'more_information')}
+          </a>
+        )}
       </div>
 
       {/* TODO: Correct positioning of 'next gig' overlay in English on larger screens */}

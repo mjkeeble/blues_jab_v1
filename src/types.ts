@@ -12,7 +12,10 @@ export type Gig = {
   dateTime: string;
   comment?: Translation;
   mapUrl: string;
-};
+} & (
+  | { link: string; linkType: "tickets" | "more_information" | "tickets_and_information" }
+  | { link?: undefined; linkType?: undefined }
+);
 
 export type Member = {
   name: string;

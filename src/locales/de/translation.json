@@ -18,6 +18,7 @@
     "Mark": "Gesang & Gitarre",
     "Wolfgang": "Gitarre"
   },
+  "more_information": "Mehr Informationen",
   "next_gig": "Nächster Auftritt!",
   "no_gigs_found": "Fehler: keine Auftritte gefunden.",
   "no_gigs_planned": "Keine Auftritte derzeit geplant. Schau bald wieder vorbei!",
@@ -26,5 +27,7 @@
   "show_past_gigs": "Vergangene Auftritte anzeigen",
   "hide_past_gigs": "Vergangene Auftritte verbergen",
   "source": "Quelle",
-  "switch_language": "English"
+  "switch_language": "English",
+  "tickets": "Karten",
+  "tickets_and_information": "Karten und Infos"
 }

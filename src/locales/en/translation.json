@@ -18,6 +18,7 @@
     "Mark": "Vocals & guitar",
     "Wolfgang": "Guitar"
   },
+  "more_information": "More information",
   "next_gig": "Next gig!",
   "no_gigs_found": "Error: no gigs found.",
   "no_gigs_planned": "No gigs planned at the moment. Please come by again later!",
@@ -26,5 +27,7 @@
   "show_past_gigs": "Show past gigs",
   "hide_past_gigs": "Hide past gigs",
   "source": "Source",
-  "switch_language": "Deutsch"
+  "switch_language": "Deutsch",
+  "tickets": "Tickets",
+  "tickets_and_information": "Tickets and information"
 }
