@@ -83,7 +83,7 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
             href={gig.link}
             target="_blank"
             rel="noopener"
-            className={`my-6 inline-block rounded border bg-bj-red px-4 py-2 font-semibold text-bj-white drop-shadow-lg hover:bg-bj-red-dark md:text-base`}
+            className={`my-6 inline-block rounded-md border bg-bj-red px-2 py-2 font-semibold text-bj-white drop-shadow-lg hover:bg-bj-red-dark md:text-base`}
           >
             {t(gig.linkType || 'more_information')}
           </a>

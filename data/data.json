@@ -22,26 +22,25 @@
     }
   ],
   "photos": [
-    { "fileId": "240928_OpenStage_1" },
-    { "fileId": "240928_OpenStage_2" },
+    { "fileId": "altegarage2025_8_small_xm4i64", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "altegarage2025_5_small_yvbeku", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "altegarage2025_10_small_iytp2s", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "altegarage2025_4_small_adydtc", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "altegarage2025_16_small_landscape_y5pv7s", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "altegarage2025_12_small_landscape_layr41", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "altegarage2025_3_small_uf1syt", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "240928_OpenStage_7_mux1za", "source": "Caspar Rieke-Itzigehl" },
-    { "fileId": "240928_OpenStage_4" },
+    { "fileId": "240928_OpenStage_2" },
     { "fileId": "240928_OpenStage_8_cropped", "source": "Caspar Rieke-Itzigehl" },
-    { "fileId": "240928_OpenStage_Andre_2", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "240928_OpenStage_Dirk_1_wkoszy", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "240928_OpenStage_Frank_1_icaxqk", "source": "Caspar Rieke-Itzigehl" },
-    { "fileId": "240928_OpenStage_Mark_2_irolph", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "240612_Goehren" },
     { "fileId": "230614_Blues_Jab_in_Goehren_05" },
-    { "fileId": "Band_240406_1_cropped" },
-    { "fileId": "230921_Blues_Jab_in_Berlin_02" },
-    { "fileId": "240406_Blues_Jab_in_Babelsberg_2" },
-    { "fileId": "240406_Blues_Jab_in_Babelsberg_3" },
-    { "fileId": "240406_Blues_Jab_in_Babelsberg_4" }
+    { "fileId": "Band_240406_1_cropped" }
   ],
   "videos": [
     { "title": "Blues Jab - Promo", "urlRef": "6Er3CZcvBug" },
-    { "title": "Blues Jab - Bluescamp 2024", "urlRef": "Nz1xR-jV_88?start=56" },
+    { "title": "Blues Jab - Bluescamp 2025", "urlRef": "Y0fmKoH2_HM" },
     { "title": "Blues Jab - 28.09.2024 - Best of Kulturscheune Rangsdorf", "urlRef": "kOFxdFWbsmg" }
   ],
   "gigs": [
@@ -123,7 +122,7 @@
         "de": "Zappa Night mit Axel Merseburger Trio und Jazzprojekt Hundehagen"
       },
       "link": "https://lindenpark.de/events/zappa-nacht-w-bluesjab-axel-merseburger-trio-jazzprojekt-hundehagen/",
-    "linkType": "tickets_and_information"
+      "linkType": "tickets_and_information"
     }
   ]
 }

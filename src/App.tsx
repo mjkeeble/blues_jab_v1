@@ -17,13 +17,13 @@ const App = () => {
   console.log('test updated Netlify settings');
   return (
     <>
-      <div className="fixed left-0 top-0 z-[-10] h-full w-full bg-[url('/cracked-concrete-wall-textured-background-blue.jpg')] bg-cover bg-center"></div>
+      <div className="fixed left-0 top-0 z-[-10] h-full w-full bg-[url('https://res.cloudinary.com/markjkeeble/image/upload/v1755342125/BluesJab/Photos/altegarage2025_13_small_robwvt.jpg')] bg-cover bg-center"></div>
 
       <div id="App-container" className="absolute top-0 z-0 w-full overscroll-none">
-        <ContentBlock bgColor={TRANSPARENT} reducedPadding='top'>
-        <div className="relative flex flex-row justify-center pt-4 pb-16">
-          <Button onClick={changeLanguage} text={t('switch_language')} colors={colorScheme.TRANSPARENT.button} />
-        </div>
+        <ContentBlock bgColor={TRANSPARENT} reducedPadding="top">
+          <div className="relative flex flex-row justify-center pb-16 pt-4">
+            <Button onClick={changeLanguage} text={t('switch_language')} colors={colorScheme.TRANSPARENT.button} />
+          </div>
           <Jumbotron />
         </ContentBlock>
         <ContentBlock bgColor={WHITE}>
@@ -37,7 +37,7 @@ const App = () => {
         <ContentBlock bgColor={WHITE}>
           <Gallery colorSettings={colorScheme.WHITE} />
         </ContentBlock>
-        <ContentBlock bgColor={BLUE_DARK} reducedPadding='bottom'>
+        <ContentBlock bgColor={BLUE_DARK} reducedPadding="bottom">
           <Contact />
         </ContentBlock>
       </div>
