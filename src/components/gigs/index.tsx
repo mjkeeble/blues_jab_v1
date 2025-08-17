@@ -12,7 +12,7 @@ interface AboutUsProps {
 
 export const Gigs = ({ colorSettings }: AboutUsProps) => {
   const { t } = useTranslation();
-  const [gigs] = useState<Gig[]>(data.gigs);
+  const [gigs] = useState<Gig[]>(data.gigs as Gig[]);
   // const [gigs, setGigs] = useState<Gig[]>([]);
   // const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -59,7 +59,14 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
         <div className="mx-2 grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 md:mx-8 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3">
           {/* gig cards */}
 
-          <Fade className="w-full flex flex-row justify-center" cascade direction={'up'} triggerOnce duration={700} damping={0.1}>
+          <Fade
+            className="flex w-full flex-row justify-center"
+            cascade
+            direction={'up'}
+            triggerOnce
+            duration={700}
+            damping={0.1}
+          >
             {showPastGigs &&
               gigs
                 .filter((gig) => new Date(gig.dateTime) < new Date())
