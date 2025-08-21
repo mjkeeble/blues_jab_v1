@@ -21,22 +21,7 @@ const Carousel = ({ colorSettings }: GalleryProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
   const [photos] = useState<Photo[]>(data.photos);
   const { t } = useTranslation();
-  // const [photos, setPhotos] = useState<Photo[]>([]);
-  // const apiUrl = import.meta.env.VITE_API_URL;
 
-  // useEffect(() => {
-  //   const fetchPhotos = async () => {
-  //     try {
-  //       const response = await fetch(`${apiUrl}\\photos`);
-  //       const data = await response.json();
-  //       setPhotos(data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchPhotos();
-  // }, [apiUrl]);
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -44,7 +29,7 @@ const Carousel = ({ colorSettings }: GalleryProps) => {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
-  // const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
+
 
   useEffect(() => {
     const handleResize = () => {
