@@ -30,7 +30,6 @@ const Carousel = ({ colorSettings }: GalleryProps) => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -66,10 +65,10 @@ const Carousel = ({ colorSettings }: GalleryProps) => {
           );
         })}
       </div>
-      <div className="mt-2 flex flex-row justify-around">
-        <div className="grid grid-cols-2 items-center gap-7  rounded-full bg-bj-blue-light">
-          <PrevButton onClick={scrollPrev} color="bg-blue-dark" />
-          <NextButton onClick={scrollNext} color="bg-blue-dark" />
+      <div className="mx-8 my-2 flex flex-row justify-around">
+        <div className="grid grid-cols-2 items-center gap-7">
+          <PrevButton onClick={scrollPrev} color="white" />
+          <NextButton onClick={scrollNext} color="white" />
         </div>
       </div>
     </div>

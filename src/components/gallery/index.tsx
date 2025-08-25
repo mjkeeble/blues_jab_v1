@@ -36,10 +36,10 @@ export const Gallery = ({ colorSettings }: AboutUsProps) => {
 
       <Carousel colorSettings={colorSettings} />
 
-      <div className="mt-10 flex flex-col items-center">
+      <div className="mt-2 flex flex-col items-center">
         {videos.map((video, index) => (
           <iframe
-            className="my-10 max-w-full border-0"
+            className="my-2 md:my-10 max-w-full border-0"
             width="853"
             height="505"
             src={`https://www.youtube.com/embed/${video.urlRef}`}

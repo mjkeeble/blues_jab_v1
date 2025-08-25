@@ -1,13 +1,5 @@
 import { ContentBlockColors } from './types';
 
-export const bgColors = {
-  TRANSPARENT: 'backdrop-opacity-100',
-  WHITE: 'bg-bj-white',
-  BLUE_LIGHT: 'bg-bj-blue-light',
-  BLUE_MID: 'bg-bj-blue-mid',
-  BLUE_DARK: 'bg-bj-blue-dark',
-};
-
 export const colorScheme: ContentBlockColors = {
   TRANSPARENT: {
     body: 'backdrop-opacity-100',
@@ -24,8 +16,8 @@ export const colorScheme: ContentBlockColors = {
     },
   },
   BLUE_LIGHT: {
-    body: 'bg-bj-blue-light',
-    margins: 'bg-bj-blue-light opacity-40',
+    body: 'bg-bj-blue-light/80',
+    margins: 'bg-bj-blue-light/40',
     h1: 'text-bj-blue-dark',
     text: 'text-black',
     cardBg: 'bg-bj-white',
@@ -38,8 +30,8 @@ export const colorScheme: ContentBlockColors = {
     },
   },
   BLUE_MID: {
-    body: 'bg-bj-blue-mid',
-    margins: 'bg-bj-white opacity-40',
+    body: 'bg-bj-blue-mid/80',
+    margins: 'bg-bj-white/40',
     h1: 'text-bj-white',
     text: 'text-bj-white',
     cardBg: 'bg-bj-blue-light',
@@ -52,8 +44,8 @@ export const colorScheme: ContentBlockColors = {
     },
   },
   BLUE_DARK: {
-    body: 'bg-bj-blue-dark',
-    margins: 'backdrop-opacity-100',
+    body: 'bg-bj-blue-dark/60',
+    margins: '',
     h1: 'text-bj-white',
     text: 'text-bj-white',
     cardBg: 'bg-bj-blue-mid',
@@ -66,8 +58,8 @@ export const colorScheme: ContentBlockColors = {
     },
   },
   WHITE: {
-    body: 'bg-bj-white',
-    margins: 'bg-bj-white opacity-40',
+    body: 'bg-bj-white/80',
+    margins: 'bg-bj-white/40',
     h1: 'text-bj-blue-dark',
     text: 'text-bj-blue-dark',
     cardBg: 'bg-bj-green-dark',

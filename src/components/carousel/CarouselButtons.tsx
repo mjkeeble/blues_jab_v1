@@ -9,7 +9,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="tap-highlight-transparent touch-action-manipulation text-decoration-none z-10 m-0 flex h-8 w-10 cursor-pointer appearance-none items-center justify-center rounded-full border-0 bg-transparent p-0 hover:scale-150 md:h-12 md:w-12"
+      className="tap-highlight-transparent touch-action-manipulation text-decoration-none z-10 m-0 flex h-8 w-10 cursor-pointer appearance-none items-center justify-center rounded-full border-0 bg-bj-blue-dark p-0 hover:scale-110 md:h-12 md:w-12"
       type="button"
       {...restProps}
     >
@@ -29,7 +29,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="tap-highlight-transparent touch-action-manipulation text-decoration-none z-10 m-0 flex h-8 w-10 cursor-pointer appearance-none items-center justify-center rounded-full border-0 bg-transparent p-0 hover:scale-150 md:h-12 md:w-12 "
+      className="tap-highlight-transparent touch-action-manipulation text-decoration-none z-10 m-0 flex h-8 w-10 cursor-pointer appearance-none items-center justify-center rounded-full border-0 bg-bj-blue-dark p-0 hover:scale-110 md:h-12 md:w-12 "
       type="button"
       {...restProps}
     >

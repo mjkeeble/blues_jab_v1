@@ -14,7 +14,7 @@ const getPadding = (reducedPadding?: 'top' | 'bottom'): string => {
     case 'bottom':
       return 'pt-4 md:pt-20';
     default:
-      return 'py-10 md:py-20';
+      return 'py-6 md:py-20';
   }
 };
 

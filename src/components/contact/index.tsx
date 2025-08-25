@@ -9,27 +9,27 @@ export const Contact = () => {
   return (
     <footer id="contact">
       
-        <h1 className="m-2 text-center font-fredericka text-4xl text-bj-blue-light md:text-6xl">
+        <h1 className="text-center font-fredericka text-3xl text-bj-blue-light md:text-5xl">
           {t('sections.contact')}
         </h1>
       
 
-      <div className="my-4 flex w-full justify-center md:my-14">
+      <div className="my-4 flex w-full justify-center md:my-8">
         <a
           href="mailto:bluesjab@keeble.email"
-          className="text-md w-['100%'] font-normal text-bj-white underline md:text-3xl hover:scale-110"
+          className="text-sm w-['100%'] font-normal text-bj-white underline md:text-2xl hover:scale-110"
         >
           {t('send_email')}
         </a>
       </div>
-      <div className="my-4 flex w-full justify-center md:my-14 ">
+      <div className="my-4 flex w-full justify-center md:my-8 ">
         <a href="https://www.facebook.com/BluesJab" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon className="text-3xl md:text-5xl hover:scale-110" icon={faFacebookSquare} />
+          <FontAwesomeIcon className="text-2xl md:text-5xl hover:scale-110" icon={faFacebookSquare} />
         </a>
       </div>
 
       <hr className="mt-4 border-t border-bj-white" />
-      <div className="mx-4 flex text-sm md:text-base justify-between pb-3 pt-4 align-bottom">
+      <div className="mx-4 flex text-xs md:text-sm justify-between pb-3 pt-4 align-bottom">
         <p className="grow-1">&copy; Blues Jab, {new Date().getFullYear()}</p>
         <div className="flex grow-0 justify-between align-bottom">
           <p>Web design by</p>

@@ -43,11 +43,11 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
 
   if (gigs.length) {
     return (
-      <section className="pb-12">
+      <section className="pb-2 md:pb-12">
         <div id="gigs" className="flex flex-row items-center justify-between">
           <SectionHeading textColor={colorSettings.h1} text={t('sections.gigs')} />
           {pastGigs.length ? (
-            <div className="mb-12">
+            <div className="mb-4 md:mb-12">
               <Button
                 text={showPastGigs ? 'hide_past_gigs' : 'show_past_gigs'}
                 onClick={handleClick}
@@ -89,7 +89,7 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
         {!futureGigs.length && (
           <div>
             <Fade direction={'up'} triggerOnce duration={700} damping={0.1}>
-              <p className="mx-10 mt-3 text-sm text-bj-blue-dark dark:text-bj-white md:mx-24 md:text-3xl">
+              <p className="mx-10 mt-3 text-xs text-bj-blue-dark dark:text-bj-white md:mx-24 md:text-xl">
                 {t('no_gigs_planned')}
               </p>
             </Fade>
@@ -101,7 +101,7 @@ export const Gigs = ({ colorSettings }: AboutUsProps) => {
   return (
     <section className="pb-12">
       <div id="gigs" className="mb-12 flex flex-row items-center justify-between">
-        <h1 className={`ml-2 h-min font-fredericka text-4xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
+        <h1 className={`ml-2 h-min font-fredericka text-3xl ${colorSettings.h1} md:text-6xl`}>Gigs</h1>
       </div>
       <p className="m-2 h-min font-fredericka text-xl text-bj-blue dark:text-bj-blue-light md:text-2xl">
         {t('no_gigs_found')}

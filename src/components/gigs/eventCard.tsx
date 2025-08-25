@@ -33,8 +33,8 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
   const { t } = useTranslation();
   const dateTime = new Date(gig.dateTime);
   const bgColors = {
-    past: 'bg-bj-white',
-    next: 'bg-bj-red',
+    past: 'bg-bj-white/100',
+    next: 'bg-bj-red/100',
     future: 'bg-bj-blue-mid',
   };
 
@@ -54,17 +54,17 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
       className={`relative ${textColors[status]} w-full rounded p-3 md:min-h-[300px] md:w-64 md:p-6 ${bgColors[status]} flex flex-col justify-start opacity-75 drop-shadow-2xl`}
     >
       <div>
-        <div className="flex flex-row justify-between text-sm font-semibold md:text-base">
+        <div className="flex flex-row justify-between text-xs font-semibold md:text-sm">
           <p>{dateTime.toLocaleDateString(i18n.language, dateDisplayOptions)}</p>
           {hasNoTime(dateTime.toISOString()) || <p>{dateTime.toLocaleTimeString(i18n.language, timeDisplayOptions)}</p>}
         </div>
         <div>
-          <p className="mt-4 font-fredericka text-base md:text-xl">{`${gig.venue},`}</p>
-          <p className="font-fredericka text-base md:text-xl">{gig.town}</p>
+          <p className="mt-4 font-fredericka text-sm md:text-lg">{`${gig.venue},`}</p>
+          <p className="font-fredericka text-sm md:text-lg">{gig.town}</p>
           {gig.mapUrl && (
             <a href={gig.mapUrl} target="_blank" rel="noopener">
               <p
-                className={`text-sm md:text-base ${
+                className={`text-xs md:text-sm ${
                   ['future', 'next'].includes(status) ? 'text-bj-blue-light' : 'text-bj-blue-dark'
                 } underline underline-offset-2`}
               >
@@ -75,7 +75,7 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
         </div>
 
         {gig.comment && (
-          <p className="grow-1 pt-4 text-sm  md:text-base">{(gig.comment as Comment)[i18n.language.substring(0, 2)]}</p>
+          <p className="grow-1 pt-4 text-xs  md:text-sm">{(gig.comment as Comment)[i18n.language.substring(0, 2)]}</p>
         )}
 
         {gig.link && (
@@ -83,7 +83,7 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
             href={gig.link}
             target="_blank"
             rel="noopener"
-            className={`my-6 inline-block rounded-md border bg-bj-red px-2 py-2 font-semibold text-bj-white drop-shadow-lg hover:bg-bj-red-dark md:text-base`}
+            className={`my-3 md:my-6 inline-block rounded-md border bg-bj-red px-2 py-2 text-xs font-semibold text-bj-white drop-shadow-lg hover:bg-bj-red-dark md:text-sm`}
           >
             {t(gig.linkType || 'more_information')}
           </a>
@@ -92,8 +92,8 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
 
       {/* TODO: Correct positioning of 'next gig' overlay in English on larger screens */}
       {status === 'next' && (
-        <JackInTheBox className="absolute -bottom-2 right-0 z-10 " delay={700} duration={500}>
-          <p className="mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-base dark:bg-bj-blue-light dark:text-bj-blue-dark md:text-2xl">
+        <JackInTheBox className="absolute -bottom-2 right-8 md:right-0 z-10 " delay={700} duration={500}>
+          <p className="mx-auto -rotate-6 bg-bj-blue-dark p-2 font-fredericka text-sm dark:bg-bj-blue-light dark:text-bj-blue-dark md:text-xl">
             {t('next_gig')}
           </p>
         </JackInTheBox>

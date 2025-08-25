@@ -14,7 +14,6 @@ const App = () => {
       i18n.changeLanguage('de');
     }
   };
-  console.log('test updated Netlify settings');
   return (
     <>
       <div className="fixed left-0 top-0 z-[-10] h-full w-full bg-[url('https://res.cloudinary.com/markjkeeble/image/upload/v1755342125/BluesJab/Photos/altegarage2025_13_small_robwvt.jpg')] bg-cover bg-center"></div>

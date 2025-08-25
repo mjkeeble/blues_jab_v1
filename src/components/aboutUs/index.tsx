@@ -36,10 +36,10 @@ export const AboutUs = ({ colorSettings }: AboutUsProps) => {
     <section id="aboutUs">
       <SectionHeading textColor={colorSettings.h1} text={t('sections.about')} />
 
-      <div className={`mx-4 mb-12 pl-2 text-sm md:mx-16 md:text-base ${colorSettings.text}`}>
-        <p className="mt-8">{t('about.paragraph1')}</p>
-        <p className="mt-8">{t('about.paragraph2')}</p>
-        <p className="mt-8">{t('about.paragraph3')}</p>
+      <div className={`mx-4 mb-4 pl-2 text-xs md:mx-16 md:mb-12 md:text-sm ${colorSettings.text}`}>
+        <p className="mt-4 md:mt-8">{t('about.paragraph1')}</p>
+        <p className="mt-4 md:mt-8">{t('about.paragraph2')}</p>
+        <p className="mt-4 md:mt-8">{t('about.paragraph3')}</p>
       </div>
 
       {/* member cards */}
