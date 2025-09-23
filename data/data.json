@@ -122,6 +122,13 @@
       },
       "link": "https://lindenpark.de/events/zappa-nacht-w-bluesjab-axel-merseburger-trio-jazzprojekt-hundehagen/",
       "linkType": "tickets_and_information"
+    },
+    {
+      "index": 6,
+      "venue": "Die Alte Garage",
+      "town": "Potsdam Babelsberg DE",
+      "dateTime": "2026-04-25T19:00:00",
+      "mapUrl": "https://maps.google.com/maps?q=die%20alte%20garage%20babelsberg"
     }
   ]
 }
