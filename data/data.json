@@ -124,11 +124,23 @@
       "linkType": "tickets_and_information"
     },
     {
-      "index": 6,
+      "index": 9,
       "venue": "Die Alte Garage",
       "town": "Potsdam Babelsberg DE",
       "dateTime": "2026-04-25T19:00:00",
       "mapUrl": "https://maps.google.com/maps?q=die%20alte%20garage%20babelsberg"
+    },
+    {
+      "index": 10,
+      "venue": "Auenkeller",
+      "town": "Berlin DE",
+      "dateTime": "2026-01-16T20:00:00",
+      "mapUrl": "https://www.google.com/maps?q=auenkeller+berlin",
+      "comment": {
+        "en": "Jan Hirte's School of Blues",
+        "de": "Jan Hirtes School of Blues"
+      },
+      "link": "https://www.auenkirche.de/aue-erleben/auenkeller"
     }
   ]
 }
