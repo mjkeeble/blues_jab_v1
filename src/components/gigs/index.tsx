@@ -12,7 +12,10 @@ interface AboutUsProps {
 
 export const Gigs = ({ colorSettings }: AboutUsProps) => {
   const { t } = useTranslation();
-  const [gigs] = useState<Gig[]>(data.gigs as Gig[]);
+  const [gigs] = useState<Gig[]>(() =>
+    [...(data.gigs as Gig[])]
+      .sort((a, b) => new Date(a.dateTime).getTime() - new Date(b.dateTime).getTime())
+  );
   // const [gigs, setGigs] = useState<Gig[]>([]);
   // const apiUrl = import.meta.env.VITE_API_URL;
 
