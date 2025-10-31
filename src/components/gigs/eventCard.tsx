@@ -2,6 +2,7 @@ import { JackInTheBox } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 import { Gig } from '../../types';
+import {getMapUrl} from './utils';
 
 // TODO: Add location icon as alternative to text link on small screens
 // <FontAwesomeIcon icon="fa-solid fa-map-location-dot" />
@@ -61,8 +62,8 @@ const EventCard: React.FC<EventCardProps> = ({ gig, status }) => {
         <div>
           <p className="mt-4 font-fredericka text-sm md:text-lg">{`${gig.venue},`}</p>
           <p className="font-fredericka text-sm md:text-lg">{gig.town}</p>
-          {gig.mapUrl && (
-            <a href={gig.mapUrl} target="_blank" rel="noopener">
+          {gig.venue && gig.town && (
+            <a href={getMapUrl(gig.venue, gig.town)} target="_blank" rel="noopener">
               <p
                 className={`text-xs md:text-sm ${
                   ['future', 'next'].includes(status) ? 'text-bj-blue-light' : 'text-bj-blue-dark'
