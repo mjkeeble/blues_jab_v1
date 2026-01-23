@@ -5,10 +5,6 @@
       "image": "mark_kivgl4"
     },
     {
-      "name": "Wolfgang",
-      "image": "wolfgang_lfym6o"
-    },
-    {
       "name": "André",
       "image": "andre_oitt2q"
     },
@@ -22,21 +18,24 @@
     }
   ],
   "photos": [
+    { "fileId": "Lindenpark-3489_fik13q", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "Lindenpark-3518_tkvb5n", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "Lindenpark-3474_gxynao", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "Lindenpark-3397_nhhfet", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "Lindenpark-3495_pvuydq", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "Lindenpark-3399_godzu7", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "Lindenpark-3512_djtvu4", "source": "Caspar Rieke-Itzigehl" },
+    { "fileId": "altegarage2025_15_cropped_small_zjz4ln", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "altegarage2025_8_small_xm4i64", "source": "Caspar Rieke-Itzigehl" },
-    { "fileId": "altegarage2025_5_small_yvbeku", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "altegarage2025_10_small_iytp2s", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "altegarage2025_4_small_adydtc", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "altegarage2025_16_small_landscape_y5pv7s", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "altegarage2025_12_small_landscape_layr41", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "altegarage2025_3_small_uf1syt", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "240928_OpenStage_7_mux1za", "source": "Caspar Rieke-Itzigehl" },
-    { "fileId": "240928_OpenStage_2" },
-    { "fileId": "240928_OpenStage_8_cropped", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "240928_OpenStage_Dirk_1_wkoszy", "source": "Caspar Rieke-Itzigehl" },
     { "fileId": "240928_OpenStage_Frank_1_icaxqk", "source": "Caspar Rieke-Itzigehl" },
-    { "fileId": "240612_Goehren" },
-    { "fileId": "230614_Blues_Jab_in_Goehren_05" },
-    { "fileId": "band_goehren_irrcqx" }
+    { "fileId": "240612_Goehren" }
   ],
   "videos": [
     { "title": "Blues Jab - Promo", "urlRef": "6Er3CZcvBug" },
@@ -111,9 +110,7 @@
       "comment": {
         "en": "Zappa Night with Axel Merseburger Trio and Jazzprojekt Hundehagen",
         "de": "Zappa Night mit Axel Merseburger Trio und Jazzprojekt Hundehagen"
-      },
-      "link": "https://lindenpark.de/events/zappa-nacht-w-bluesjab-axel-merseburger-trio-jazzprojekt-hundehagen/",
-      "linkType": "tickets_and_information"
+      }
     },
     {
       "index": 9,
@@ -130,12 +127,6 @@
         "en": "Jan Hirte's School of Blues",
         "de": "Jan Hirtes School of Blues"
       }
-    },
-    {
-      "index": 11,
-      "venue": "Zur Glühlampe",
-      "town": "Berlin DE",
-      "dateTime": "2026-02-11T00:00:00"
     }
   ]
 }
