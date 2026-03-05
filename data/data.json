@@ -127,6 +127,16 @@
         "en": "Jan Hirte's School of Blues",
         "de": "Jan Hirtes School of Blues"
       }
+    },
+    {
+      "index": 12,
+      "venue": "PView Billard, Albrechtstraße 55",
+      "town": "12167 Berlin DE",
+      "dateTime": "2026-03-23T19:00:00",
+      "comment": {
+        "en": "Jam Session",
+        "de": "Jam Session"
+      }
     }
   ]
 }
